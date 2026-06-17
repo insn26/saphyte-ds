@@ -1,0 +1,198 @@
+{
+  "$type": "number",
+  "size0": {
+    "$type": "number",
+    "$value": 0,
+    "$description": "No Space"
+  },
+  "sizeXXS": {
+    "$type": "number",
+    "$value": 4,
+    "$description": "Very small spacing, used for minimal gaps between tightly related elements."
+  },
+  "sizeXS": {
+    "$type": "number",
+    "$value": 8,
+    "$description": "Small spacing, suitable for padding in compact UI elements like small buttons or between inline items."
+  },
+  "sizeSM": {
+    "$type": "number",
+    "$value": 12,
+    "$description": "Small-Medium spacing, providing a comfortable gap for smaller components."
+  },
+  "size": {
+    "$type": "number",
+    "$value": 14,
+    "$description": "Default text size."
+  },
+  "sizeMS": {
+    "$type": "number",
+    "$value": 16,
+    "$description": "Medium-Small spacing, often used for standard padding in buttons or input fields."
+  },
+  "sizeMD": {
+    "$type": "number",
+    "$value": 20,
+    "$description": "Medium spacing, used for moderate padding in components."
+  },
+  "sizeLG": {
+    "$type": "number",
+    "$value": 24,
+    "$description": "Large spacing, suitable for padding in larger UI elements like cards or sections."
+  },
+  "sizeXL": {
+    "$type": "number",
+    "$value": 32,
+    "$description": "Extra-Large spacing, used for significant gaps between major sections or larger padding."
+  },
+  "sizeXXL": {
+    "$type": "number",
+    "$value": 48,
+    "$description": "Extra-Extra-Large spacing, used for major section separations or prominent padding."
+  },
+  "controlHeight": {
+    "$type": "number",
+    "$value": 32,
+    "$description": "Default control height."
+  },
+  "controlHeightXS": {
+    "$type": "number",
+    "$value": 16,
+    "$description": "XS control height."
+  },
+  "controlHeightSM": {
+    "$type": "number",
+    "$value": 24,
+    "$description": "SM control height."
+  },
+  "controlHeightLG": {
+    "$type": "number",
+    "$value": 40,
+    "$description": "LG control height."
+  },
+  "PaddingXXS": {
+    "$type": "number",
+    "$value": "{sizeXXS}",
+    "$description": "Extra extra small padding."
+  },
+  "PaddingXS": {
+    "$type": "number",
+    "$value": "{sizeXS}",
+    "$description": "Extra small padding."
+  },
+  "PaddingSM": {
+    "$type": "number",
+    "$value": "{sizeSM}",
+    "$description": "Small padding."
+  },
+  "Padding": {
+    "$type": "number",
+    "$value": "{sizeMS}",
+    "$description": "Default padding."
+  },
+  "PaddingMS": {
+    "$type": "number",
+    "$value": "{sizeMD}",
+    "$description": "Medium small padding."
+  },
+  "PaddingMD": {
+    "$type": "number",
+    "$value": "{sizeLG}",
+    "$description": "Medium padding."
+  },
+  "PaddingLG": {
+    "$type": "number",
+    "$value": "{sizeXL}",
+    "$description": "Large padding."
+  },
+  "PaddingXXL": {
+    "$type": "number",
+    "$value": "{sizeXXL}",
+    "$description": "Extra extra large padding."
+  },
+  "MarginXXS": {
+    "$type": "number",
+    "$value": "{sizeXXS}",
+    "$description": "Extra extra small margin."
+  },
+  "MarginXS": {
+    "$type": "number",
+    "$value": "{sizeXS}",
+    "$description": "Extra small margin."
+  },
+  "MarginSM": {
+    "$type": "number",
+    "$value": "{sizeSM}",
+    "$description": "Small margin."
+  },
+  "Margin": {
+    "$type": "number",
+    "$value": "{sizeMS}",
+    "$description": "Default margin."
+  },
+  "MarginMS": {
+    "$type": "number",
+    "$value": "{sizeMD}",
+    "$description": "Medium small margin."
+  },
+  "MarginMD": {
+    "$type": "number",
+    "$value": "{sizeLG}",
+    "$description": "Medium margin."
+  },
+  "MarginLG": {
+    "$type": "number",
+    "$value": "{sizeXL}",
+    "$description": "Large margin."
+  },
+  "MarginXXL": {
+    "$type": "number",
+    "$value": "{sizeXXL}",
+    "$description": "Extra extra large margin."
+  },
+  "borderRadius0": {
+    "$type": "number",
+    "$value": 0,
+    "$description": "No border radius."
+  },
+  "borderRadiusXS": {
+    "$type": "number",
+    "$value": 2,
+    "$description": "Extra small border radius."
+  },
+  "borderRadiusSM": {
+    "$type": "number",
+    "$value": 4,
+    "$description": "Small border radius."
+  },
+  "borderRadius": {
+    "$type": "number",
+    "$value": 6,
+    "$description": "Default border radius."
+  },
+  "borderRadiusLG": {
+    "$type": "number",
+    "$value": 8,
+    "$description": "Large border radius."
+  },
+  "borderRadius12": {
+    "$type": "number",
+    "$value": 12,
+    "$description": "12px border radius."
+  },
+  "borderRadius16": {
+    "$type": "number",
+    "$value": 16,
+    "$description": "16px border radius."
+  },
+  "borderRadius24": {
+    "$type": "number",
+    "$value": 20,
+    "$description": "24px border radius."
+  },
+  "borderRadius32": {
+    "$type": "number",
+    "$value": 32,
+    "$description": "32px border radius."
+  }
+}

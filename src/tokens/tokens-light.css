@@ -1,0 +1,428 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --navy1: #e8ecf4;
+  --navy2: #dce1ed;
+  --navy3: #c4cbd8;
+  --navy4: #9ca8be;
+  --navy5: #7484a3;
+  --navy6: #566690;
+  --navy7: #3f4f79;
+  --navy8: #2b3a62;
+  --navy9: #1a2650;
+  --navy10: #0f1730;
+  --cyan1: #d5f6f0;
+  --cyan2: #b5ede3;
+  --cyan3: #85dfd1;
+  --cyan4: #4ecac8;
+  --cyan5: #2db8b9;
+  --cyan6: #1c9b9f;
+  --cyan7: #127d85;
+  --cyan8: #0d646c;
+  --cyan9: #094b53;
+  --cyan10: #063238;
+  --blue1: #d4e7ff;
+  --blue2: #b7d4ff;
+  --blue3: #8db9ff;
+  --blue4: #5c98ff;
+  --blue5: #3a7df8;
+  --blue6: #2564eb;
+  --blue7: #194dd4;
+  --blue8: #123bb5;
+  --blue9: #0b2991;
+  --blue10: #061a6b;
+  --purple1: #f0e5ff;
+  --purple2: #e3ccff;
+  --purple3: #cda6ff;
+  --purple4: #b27aff;
+  --purple5: #9c57f5;
+  --purple6: #833ee6;
+  --purple7: #6c2bd0;
+  --purple8: #561fb0;
+  --purple9: #40158c;
+  --purple10: #2c0d68;
+  --green1: #e5f8e2;
+  --green2: #ccf0c7;
+  --green3: #a2e299;
+  --green4: #71cf64;
+  --green5: #4dbd43;
+  --green6: #36a52d;
+  --green7: #288a20;
+  --green8: #1d6e16;
+  --green9: #14510f;
+  --green10: #0c3609;
+  --magenta1: #fce4f0;
+  --magenta2: #f9c7e2;
+  --magenta3: #f29dc8;
+  --magenta4: #e96caa;
+  --magenta5: #e04694;
+  --magenta6: #cc2b7f;
+  --magenta7: #b01d6a;
+  --magenta8: #931557;
+  --magenta9: #710f43;
+  --magenta10: #500a2f;
+  --red1: #ffe0d9;
+  --red2: #ffc4ba;
+  --red3: #ff9c90;
+  --red4: #ff6c5e;
+  --red5: #f74538;
+  --red6: #e12820;
+  --red7: #be1c18;
+  --red8: #9a1516;
+  --red9: #741013;
+  --red10: #510c0f;
+  --orange1: #fff0d5;
+  --orange2: #ffe0b2;
+  --orange3: #ffc580;
+  --orange4: #ffa54d;
+  --orange5: #ff8c26;
+  --orange6: #f07418;
+  --orange7: #cc5c11;
+  --orange8: #a8470d;
+  --orange9: #83340a;
+  --orange10: #5f2508;
+  --yellow1: #fff9d5;
+  --yellow2: #fff3b3;
+  --yellow3: #ffe880;
+  --yellow4: #ffda4d;
+  --yellow5: #ffcd26;
+  --yellow6: #f0ba18;
+  --yellow7: #cca311;
+  --yellow8: #a88a0d;
+  --yellow9: #836d0a;
+  --yellow10: #5f5008;
+  --volcano1: #ffe2d5;
+  --volcano2: #ffc5b3;
+  --volcano3: #ffa187;
+  --volcano4: #ff7a5c;
+  --volcano5: #f55738;
+  --volcano6: #dc3e21;
+  --volcano7: #b82e19;
+  --volcano8: #952415;
+  --volcano9: #711b11;
+  --volcano10: #50130d;
+  --geekblue1: #e5edff;
+  --geekblue2: #c9d8ff;
+  --geekblue3: #9db8ff;
+  --geekblue4: #6c93ff;
+  --geekblue5: #4872e8;
+  --geekblue6: #3258cd;
+  --geekblue7: #2441b1;
+  --geekblue8: #192f91;
+  --geekblue9: #10206e;
+  --geekblue10: #08144a;
+  --lime1: #e8f8c9;
+  --lime2: #d5f0a3;
+  --lime3: #b9e275;
+  --lime4: #9ad24b;
+  --lime5: #7ec22e;
+  --lime6: #64a822;
+  --lime7: #4d8d1a;
+  --lime8: #3a7214;
+  --lime9: #2a570f;
+  --lime10: #1c3d0b;
+  --gold1: #fff5d5;
+  --gold2: #ffeab3;
+  --gold3: #ffd980;
+  --gold4: #ffc74d;
+  --gold5: #ffb926;
+  --gold6: #f0a318;
+  --gold7: #cc8b11;
+  --gold8: #a8730d;
+  --gold9: #835c0a;
+  --gold10: #5f4308;
+  --size0: 0; /** No Space */
+  --size-xxs: 4; /** Very small spacing, used for minimal gaps between tightly related elements. */
+  --size-xs: 8; /** Small spacing, suitable for padding in compact UI elements like small buttons or between inline items. */
+  --size-sm: 12; /** Small-Medium spacing, providing a comfortable gap for smaller components. */
+  --size: 14; /** Default text size. */
+  --size-ms: 16; /** Medium-Small spacing, often used for standard padding in buttons or input fields. */
+  --size-md: 20; /** Medium spacing, used for moderate padding in components. */
+  --size-lg: 24; /** Large spacing, suitable for padding in larger UI elements like cards or sections. */
+  --size-xl: 32; /** Extra-Large spacing, used for significant gaps between major sections or larger padding. */
+  --size-xxl: 48; /** Extra-Extra-Large spacing, used for major section separations or prominent padding. */
+  --control-height: 32; /** Default control height. */
+  --control-height-xs: 16; /** XS control height. */
+  --control-height-sm: 24; /** SM control height. */
+  --control-height-lg: 40; /** LG control height. */
+  --border-radius0: 0; /** No border radius. */
+  --border-radius-xs: 2; /** Extra small border radius. */
+  --border-radius-sm: 4; /** Small border radius. */
+  --border-radius: 6; /** Default border radius. */
+  --border-radius-lg: 8; /** Large border radius. */
+  --border-radius12: 12; /** 12px border radius. */
+  --border-radius16: 16; /** 16px border radius. */
+  --border-radius24: 20; /** 24px border radius. */
+  --border-radius32: 32; /** 32px border radius. */
+  --text-tertiary: #495069;
+  --text-quaternary: #384257;
+  --text-on-solid: #ffffff;
+  --text-primary: #1a1d26;
+  --text-secondary: #69738d;
+  --text-disabled: #b5bfcd;
+  --text-brand: #6c4cff;
+  --text-danger: #e12820;
+  --text-info: #2564eb;
+  --text-success: #36a52d;
+  --text-warning: #ff8c26;
+  --text-link: #2564eb;
+  --text-on-danger: #ffffff;
+  --text-on-info: #ffffff;
+  --text-on-success: #ffffff;
+  --text-on-warning: #1a1d26;
+  --background-brand: #6c4cff;
+  --background-danger: #e12820;
+  --background-info: #2564eb;
+  --background-success: #36a52d;
+  --background-warning: #ff8c26;
+  --background-greyscale: #e5e9f0;
+  --background-greyscale-light: #eef1f6;
+  --background-greyscale-dark: #dce1ed;
+  --background-inverse: #1a1d26;
+  --background-solid: #ffffff;
+  --background-primary: #ffffff;
+  --background-secondary: #f8f9fc;
+  --background-tertiary: #eef1f6;
+  --fill-brand: #6c4cff;
+  --fill-danger: #e12820;
+  --fill-info: #2564eb;
+  --fill-success: #36a52d;
+  --fill-warning: #ff8c26;
+  --fill-greyscale: #e5e9f0;
+  --fill-greyscale-light: #eef1f6;
+  --fill-greyscale-dark: #dce1ed;
+  --fill-inverse: #1a1d26;
+  --fill-solid: #ffffff;
+  --fill-primary: rgba(26, 29, 38, 0.12);
+  --fill-secondary: rgba(26, 29, 38, 0.08);
+  --fill-tertiary: rgba(26, 29, 38, 0.04);
+  --fill-quaternary: rgba(26, 29, 38, 0.02);
+  --fill-disabled: rgba(26, 29, 38, 0.04);
+  --fill-selected: rgba(108, 76, 255, 0.08);
+  --fill-hover: rgba(26, 29, 38, 0.06);
+  --fill-active: rgba(26, 29, 38, 0.12);
+  --border-brand: #6c4cff;
+  --border-danger: #e12820;
+  --border-info: #2564eb;
+  --border-success: #36a52d;
+  --border-warning: #ff8c26;
+  --border-greyscale: #e5e9f0;
+  --border-greyscale-light: #eef1f6;
+  --border-greyscale-dark: #dce1ed;
+  --border-inverse: #1a1d26;
+  --border-solid: #ffffff;
+  --border-secondary: rgba(26, 29, 38, 0.06);
+  --border-tertiary: rgba(26, 29, 38, 0.12);
+  --border-disabled: #dce1ed;
+  --border-hover: #6c4cff;
+  --border-active: #6c4cff;
+  --border-selected: #6c4cff;
+  --border-primary: #dce1ed;
+  --primary-text: #6c4cff;
+  --primary-bg: #ffffff;
+  --primary-border: #6c4cff;
+  --primary-hover: #833ee6;
+  --primary-active: #561fb0;
+  --primary-text-hover: #833ee6;
+  --primary-text-active: #561fb0;
+  --primary-bg-hover: #f0e5ff;
+  --primary-bg-active: #cda6ff;
+  --primary-border-hover: #833ee6;
+  --primary-border-active: #561fb0;
+  --primary-hover-alter: #f0e5ff;
+  --primary-active-alter: #cda6ff;
+  --primary-bg-light: #f0e5ff;
+  --primary-bg-light-hover: #e3ccff;
+  --primary-bg-light-active: #cda6ff;
+  --primary-outline: rgba(108, 76, 255, 0.32);
+  --primary-shadow: rgba(108, 76, 255, 0.16);
+  --success-text: #36a52d;
+  --success-bg: #ffffff;
+  --success-border: #36a52d;
+  --success-hover: #288a20;
+  --success-active: #1d6e16;
+  --success-text-hover: #288a20;
+  --success-text-active: #1d6e16;
+  --success-bg-hover: #e5f8e2;
+  --success-bg-active: #a2e299;
+  --success-border-hover: #288a20;
+  --success-border-active: #1d6e16;
+  --success-hover-alter: #e5f8e2;
+  --success-active-alter: #a2e299;
+  --success-bg-light: #e5f8e2;
+  --success-bg-light-hover: #ccf0c7;
+  --success-bg-light-active: #a2e299;
+  --success-outline: rgba(54, 165, 45, 0.32);
+  --success-shadow: rgba(54, 165, 45, 0.16);
+  --warning-text: #ff8c26;
+  --warning-bg: #ffffff;
+  --warning-border: #ff8c26;
+  --warning-hover: #f07418;
+  --warning-active: #cc5c11;
+  --warning-text-hover: #f07418;
+  --warning-text-active: #cc5c11;
+  --warning-bg-hover: #fff0d5;
+  --warning-bg-active: #ffc580;
+  --warning-border-hover: #f07418;
+  --warning-border-active: #cc5c11;
+  --warning-hover-alter: #fff0d5;
+  --warning-active-alter: #ffc580;
+  --warning-bg-light: #fff0d5;
+  --warning-bg-light-hover: #ffe0b2;
+  --warning-bg-light-active: #ffc580;
+  --warning-outline: rgba(255, 140, 38, 0.32);
+  --warning-shadow: rgba(255, 140, 38, 0.16);
+  --error-text: #e12820;
+  --error-bg: #ffffff;
+  --error-border: #e12820;
+  --error-hover: #be1c18;
+  --error-active: #9a1516;
+  --error-text-hover: #be1c18;
+  --error-text-active: #9a1516;
+  --error-bg-hover: #ffe0d9;
+  --error-bg-active: #ff9c90;
+  --error-border-hover: #be1c18;
+  --error-border-active: #9a1516;
+  --error-hover-alter: #ffe0d9;
+  --error-active-alter: #ff9c90;
+  --error-bg-light: #ffe0d9;
+  --error-bg-light-hover: #ffc4ba;
+  --error-bg-light-active: #ff9c90;
+  --error-outline: rgba(225, 40, 32, 0.32);
+  --error-shadow: rgba(225, 40, 32, 0.16);
+  --color-base: #ffffff;
+  --color-black: #1a1d26;
+  --color-bg-container: #ffffff;
+  --color-bg-elevated: #ffffff;
+  --color-bg-layout: #f8f9fc;
+  --color-bg-mask: rgba(26, 29, 38, 0.29);
+  --color-bg-spotlight: rgba(26, 29, 38, 0.85);
+  --color-bg-tooltip: #1a1d26;
+  --color-border: #dce1ed;
+  --color-border-secondary: #eef1f6;
+  --color-error: #e12820;
+  --color-error-bg: #ffe0d9;
+  --color-error-bg-hover: #ffc4ba;
+  --color-error-bg-active: #ff9c90;
+  --color-error-border: #ff6c5e;
+  --color-error-border-hover: #f74538;
+  --color-error-hover: #ffc4ba;
+  --color-error-active: #ff9c90;
+  --color-error-text: #e12820;
+  --color-error-text-hover: #be1c18;
+  --color-error-text-active: #9a1516;
+  --color-success: #36a52d;
+  --color-success-bg: #e5f8e2;
+  --color-success-bg-hover: #ccf0c7;
+  --color-success-bg-active: #a2e299;
+  --color-success-border: #71cf64;
+  --color-success-border-hover: #4dbd43;
+  --color-success-hover: #ccf0c7;
+  --color-success-hover-alter: #e5f8e2;
+  --color-success-active: #a2e299;
+  --color-success-active-alter: #a2e299;
+  --color-success-text: #36a52d;
+  --color-success-text-hover: #288a20;
+  --color-success-text-active: #1d6e16;
+  --color-warning: #ff8c26;
+  --color-warning-bg: #fff0d5;
+  --color-warning-bg-hover: #ffe0b2;
+  --color-warning-bg-active: #ffc580;
+  --color-warning-border: #ffa54d;
+  --color-warning-border-hover: #ff8c26;
+  --color-warning-hover: #ffe0b2;
+  --color-warning-hover-alter: #fff0d5;
+  --color-warning-active: #ffc580;
+  --color-warning-active-alter: #ffc580;
+  --color-warning-text: #ff8c26;
+  --color-warning-text-hover: #f07418;
+  --color-warning-text-active: #cc5c11;
+  --color-info: #2564eb;
+  --color-info-bg: #d4e7ff;
+  --color-info-bg-hover: #b7d4ff;
+  --color-info-bg-active: #8db9ff;
+  --color-info-border: #5c98ff;
+  --color-info-border-hover: #3a7df8;
+  --color-info-hover: #b7d4ff;
+  --color-info-hover-alter: #d4e7ff;
+  --color-info-active: #8db9ff;
+  --color-info-active-alter: #8db9ff;
+  --color-info-text: #2564eb;
+  --color-info-text-hover: #194dd4;
+  --color-info-text-active: #123bb5;
+  --color-primary: #6c4cff;
+  --color-primary-bg: #f0e5ff;
+  --color-primary-bg-hover: #e3ccff;
+  --color-primary-bg-active: #cda6ff;
+  --color-primary-border: #b27aff;
+  --color-primary-border-hover: #9c57f5;
+  --color-primary-hover: #e3ccff;
+  --color-primary-hover-alter: #f0e5ff;
+  --color-primary-active: #cda6ff;
+  --color-primary-active-alter: #cda6ff;
+  --color-primary-text: #6c4cff;
+  --color-primary-text-hover: #833ee6;
+  --color-primary-text-active: #561fb0;
+  --color-link: #2564eb;
+  --color-link-hover: #194dd4;
+  --color-link-active: #123bb5;
+  --color-text: #1a1d26;
+  --color-text-secondary: #69738d;
+  --color-text-tertiary: #495069;
+  --color-text-quaternary: #384257;
+  --color-text-description: #69738d;
+  --color-text-disabled: #b5bfcd;
+  --color-text-heading: #1a1d26;
+  --color-text-placeholder: #b5bfcd;
+  --color-text-solid: #1a1d26;
+  --color-text-solid-hover: #1a1d26;
+  --color-text-solid-active: #1a1d26;
+  --color-text-solid-disabled: #b5bfcd;
+  --color-bg-solid: #1a1d26;
+  --color-bg-solid-hover: #1a1d26;
+  --color-bg-solid-active: #1a1d26;
+  --color-bg-solid-disabled: #b5bfcd;
+  --color-bg-mask-revert: #ffffff;
+  --color-bg-mask-hover: rgba(26, 29, 38, 0.45);
+  --color-bg-mask-active: rgba(26, 29, 38, 0.45);
+  --color-bg-mask-disabled: rgba(26, 29, 38, 0.15);
+  --color-bg-container-hover: #f8f9fc;
+  --color-bg-container-active: #eef1f6;
+  --color-bg-container-disabled: #eef1f6;
+  --color-bg-elevated-hover: #f8f9fc;
+  --color-bg-elevated-active: #eef1f6;
+  --color-bg-elevated-disabled: #eef1f6;
+  --color-bg-spotlight-hover: rgba(26, 29, 38, 0.85);
+  --color-bg-spotlight-active: rgba(26, 29, 38, 0.85);
+  --color-bg-spotlight-disabled: rgba(26, 29, 38, 0.04);
+  --color-bg-tooltip-hover: #1a1d26;
+  --color-bg-tooltip-active: #1a1d26;
+  --color-bg-tooltip-disabled: rgba(26, 29, 38, 0.04);
+  --color-border-hover: #6c4cff;
+  --color-border-active: #6c4cff;
+  --color-border-disabled: #dce1ed;
+  --color-border-secondary-hover: #6c4cff;
+  --color-border-secondary-active: #6c4cff;
+  --color-border-secondary-disabled: #dce1ed;
+  --color-bg-layout-hover: #f8f9fc;
+  --color-bg-layout-active: #f8f9fc;
+  --color-bg-layout-disabled: #eef1f6;
+  --padding-xxs: var(--size-xxs); /** Extra extra small padding. */
+  --padding-xs: var(--size-xs); /** Extra small padding. */
+  --padding-sm: var(--size-sm); /** Small padding. */
+  --padding: var(--size-ms); /** Default padding. */
+  --padding-ms: var(--size-md); /** Medium small padding. */
+  --padding-md: var(--size-lg); /** Medium padding. */
+  --padding-lg: var(--size-xl); /** Large padding. */
+  --padding-xxl: var(--size-xxl); /** Extra extra large padding. */
+  --margin-xxs: var(--size-xxs); /** Extra extra small margin. */
+  --margin-xs: var(--size-xs); /** Extra small margin. */
+  --margin-sm: var(--size-sm); /** Small margin. */
+  --margin: var(--size-ms); /** Default margin. */
+  --margin-ms: var(--size-md); /** Medium small margin. */
+  --margin-md: var(--size-lg); /** Medium margin. */
+  --margin-lg: var(--size-xl); /** Large margin. */
+  --margin-xxl: var(--size-xxl); /** Extra extra large margin. */
+}

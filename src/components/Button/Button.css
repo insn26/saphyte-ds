@@ -1,0 +1,372 @@
+.ds-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  user-select: none;
+  outline: none;
+  text-decoration: none;
+}
+
+/* Sizes */
+.ds-btn--small {
+  height: 24px;
+  padding: 0 8px;
+  border-radius: 4px;
+}
+
+.ds-btn--default {
+  height: 32px;
+  padding: 0 16px;
+}
+
+.ds-btn--large {
+  height: 40px;
+  padding: 0 16px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+/* Variants - Primary */
+.ds-btn--primary {
+  background-color: #6c4cff;
+  color: #ffffff;
+  border-color: #6c4cff;
+}
+
+.ds-btn--primary:hover:not(.ds-btn--disabled) {
+  background-color: #8e7aff;
+  border-color: #8e7aff;
+}
+
+.ds-btn--primary:active:not(.ds-btn--disabled) {
+  background-color: #5d42e6;
+  border-color: #5d42e6;
+}
+
+.ds-btn--primary:focus-visible {
+  background-color: #8e7aff;
+  border-color: #8e7aff;
+}
+
+/* Variants - Default */
+.ds-btn--type-default {
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.88);
+  border-color: #d9d9d9;
+}
+
+.ds-btn--type-default:hover:not(.ds-btn--disabled) {
+  color: #8e7aff;
+  border-color: #8e7aff;
+}
+
+.ds-btn--type-default:active:not(.ds-btn--disabled) {
+  color: #5d42e6;
+  border-color: #5d42e6;
+}
+
+.ds-btn--type-default:focus-visible {
+  color: #8e7aff;
+  border-color: #8e7aff;
+}
+
+/* Variants - Dashed */
+.ds-btn--dashed {
+  background-color: transparent;
+  color: #6c4cff;
+  border-color: #6c4cff;
+  border-style: dashed;
+}
+
+.ds-btn--dashed:hover:not(.ds-btn--disabled) {
+  color: #8e7aff;
+  border-color: #8e7aff;
+}
+
+.ds-btn--dashed:active:not(.ds-btn--disabled) {
+  color: #5d42e6;
+  border-color: #5d42e6;
+}
+
+.ds-btn--dashed:focus-visible {
+  color: #8e7aff;
+  border-color: #8e7aff;
+}
+
+/* Variants - Text */
+.ds-btn--text {
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.88);
+  border-color: transparent;
+}
+
+.ds-btn--text:hover:not(.ds-btn--disabled) {
+  background-color: rgba(0, 0, 0, 0.06);
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.ds-btn--text:active:not(.ds-btn--disabled) {
+  background-color: rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.ds-btn--text:focus-visible {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+/* Variants - Link */
+.ds-btn--link {
+  background-color: transparent;
+  color: #6c4cff;
+  border-color: transparent;
+}
+
+.ds-btn--link:hover:not(.ds-btn--disabled) {
+  color: #8e7aff;
+}
+
+.ds-btn--link:active:not(.ds-btn--disabled) {
+  color: #5d42e6;
+}
+
+.ds-btn--link:focus-visible {
+  color: #8e7aff;
+}
+
+/* Ghost - Primary */
+.ds-btn--ghost.ds-btn--primary {
+  background-color: transparent;
+  color: #6c4cff;
+  border-color: #6c4cff;
+}
+
+.ds-btn--ghost.ds-btn--primary:hover:not(.ds-btn--disabled) {
+  color: #8e7aff;
+  border-color: #8e7aff;
+}
+
+.ds-btn--ghost.ds-btn--primary:active:not(.ds-btn--disabled) {
+  color: #5d42e6;
+  border-color: #5d42e6;
+}
+
+.ds-btn--ghost.ds-btn--primary:focus-visible {
+  color: #8e7aff;
+  border-color: #8e7aff;
+}
+
+/* Ghost - Default */
+.ds-btn--ghost.ds-btn--type-default {
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.88);
+  border-color: #d9d9d9;
+}
+
+.ds-btn--ghost.ds-btn--type-default:hover:not(.ds-btn--disabled) {
+  color: #8e7aff;
+  border-color: #8e7aff;
+}
+
+.ds-btn--ghost.ds-btn--type-default:active:not(.ds-btn--disabled) {
+  color: #5d42e6;
+  border-color: #5d42e6;
+}
+
+.ds-btn--ghost.ds-btn--type-default:focus-visible {
+  color: #8e7aff;
+  border-color: #8e7aff;
+}
+
+/* Danger - Primary */
+.ds-btn--danger.ds-btn--primary {
+  background-color: #f5222d;
+  color: #ffffff;
+  border-color: #f5222d;
+}
+
+.ds-btn--danger.ds-btn--primary:hover:not(.ds-btn--disabled) {
+  background-color: #ff4d4f;
+  border-color: #ff4d4f;
+}
+
+.ds-btn--danger.ds-btn--primary:active:not(.ds-btn--disabled) {
+  background-color: #e12820;
+  border-color: #e12820;
+}
+
+.ds-btn--danger.ds-btn--primary:focus-visible {
+  background-color: #ff4d4f;
+  border-color: #ff4d4f;
+}
+
+/* Danger - Default */
+.ds-btn--danger.ds-btn--type-default {
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.88);
+  border-color: #d9d9d9;
+}
+
+.ds-btn--danger.ds-btn--type-default:hover:not(.ds-btn--disabled) {
+  color: #ff4d4f;
+  border-color: #ff4d4f;
+}
+
+.ds-btn--danger.ds-btn--type-default:active:not(.ds-btn--disabled) {
+  color: #e12820;
+  border-color: #e12820;
+}
+
+.ds-btn--danger.ds-btn--type-default:focus-visible {
+  color: #ff4d4f;
+  border-color: #ff4d4f;
+}
+
+/* Danger - Text */
+.ds-btn--danger.ds-btn--text {
+  color: #ff4d4f;
+}
+
+.ds-btn--danger.ds-btn--text:hover:not(.ds-btn--disabled) {
+  background-color: rgba(255, 77, 79, 0.06);
+  color: #ff4d4f;
+}
+
+.ds-btn--danger.ds-btn--text:active:not(.ds-btn--disabled) {
+  background-color: rgba(255, 77, 79, 0.12);
+  color: #e12820;
+}
+
+/* Danger - Link */
+.ds-btn--danger.ds-btn--link {
+  color: #ff4d4f;
+}
+
+.ds-btn--danger.ds-btn--link:hover:not(.ds-btn--disabled) {
+  color: #ff4d4f;
+}
+
+.ds-btn--danger.ds-btn--link:active:not(.ds-btn--disabled) {
+  color: #e12820;
+}
+
+/* Circle (icon-only only) */
+.ds-btn--circle {
+  border-radius: 32px;
+}
+
+/* Icon-only */
+.ds-btn--icon-only.ds-btn--small {
+  width: 24px;
+  padding: 0;
+}
+
+.ds-btn--icon-only.ds-btn--default {
+  width: 32px;
+  padding: 0;
+}
+
+.ds-btn--icon-only.ds-btn--large {
+  width: 40px;
+  padding: 0;
+}
+
+/* Icon */
+.ds-btn__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ds-btn__icon svg {
+  width: 1em;
+  height: 1em;
+}
+
+.ds-btn--small .ds-btn__icon svg {
+  width: 12px;
+  height: 12px;
+}
+
+.ds-btn--default .ds-btn__icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.ds-btn--large .ds-btn__icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Label */
+.ds-btn__label {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Loading */
+.ds-btn--loading {
+  pointer-events: none;
+}
+
+.ds-btn__spinner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  animation: ds-btn-spin 1s linear infinite;
+}
+
+.ds-btn__spinner svg {
+  width: 14px;
+  height: 14px;
+}
+
+.ds-btn--small .ds-btn__spinner svg {
+  width: 12px;
+  height: 12px;
+}
+
+.ds-btn--large .ds-btn__spinner svg {
+  width: 16px;
+  height: 16px;
+}
+
+@keyframes ds-btn-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Disabled */
+.ds-btn--disabled {
+  opacity: 1;
+  cursor: not-allowed;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-color: #d9d9d9;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.ds-btn--disabled.ds-btn--primary {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-color: #d9d9d9;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.ds-btn--disabled.ds-btn--text,
+.ds-btn--disabled.ds-btn--link {
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.25);
+}

@@ -1,0 +1,109 @@
+@import "../tokens/tokens-light.css";
+@import "../tokens/tokens-dark.css";
+
+:root {
+  /* Semantic color tokens - Light mode (from Figma) */
+  --ds-color-bg-primary: var(--background-solid);
+  --ds-color-bg-secondary: var(--background-primary);
+  --ds-color-bg-tertiary: var(--background-secondary);
+  --ds-color-bg-inverse: var(--background-inverse);
+
+  --ds-color-text-primary: var(--text-primary);
+  --ds-color-text-secondary: var(--text-secondary);
+  --ds-color-text-tertiary: var(--text-tertiary);
+  --ds-color-text-inverse: var(--text-on-solid);
+  --ds-color-text-disabled: var(--text-disabled);
+
+  --ds-color-border-default: var(--border-primary);
+  --ds-color-border-strong: var(--border-secondary);
+  --ds-color-border-focus: var(--primary-border);
+
+  --ds-color-brand-primary: var(--primary-text);
+  --ds-color-brand-primary-hover: var(--primary-hover);
+  --ds-color-brand-primary-active: var(--primary-active);
+
+  --ds-color-status-success: var(--success-text);
+  --ds-color-status-success-bg: var(--success-bg);
+  --ds-color-status-warning: var(--warning-text);
+  --ds-color-status-warning-bg: var(--warning-bg);
+  --ds-color-status-danger: var(--error-text);
+  --ds-color-status-danger-bg: var(--error-bg);
+  --ds-color-status-info: var(--info-text);
+  --ds-color-status-info-bg: var(--info-bg);
+
+  /* Button semantic tokens */
+  --ds-btn-primary-bg: var(--primary-text);
+  --ds-btn-primary-bg-hover: var(--primary-hover);
+  --ds-btn-primary-bg-active: var(--primary-active);
+  --ds-btn-primary-text: var(--text-on-solid);
+
+  --ds-btn-default-bg: var(--background-solid);
+  --ds-btn-default-bg-hover: var(--color-bg-container-hover);
+  --ds-btn-default-bg-active: var(--color-bg-container-active);
+  --ds-btn-default-text: var(--text-primary);
+  --ds-btn-default-border: var(--border-primary);
+
+  --ds-btn-danger-bg: var(--error-text);
+  --ds-btn-danger-bg-hover: var(--error-hover);
+  --ds-btn-danger-text: var(--text-on-danger);
+
+  --ds-btn-text-text: var(--primary-text);
+  --ds-btn-text-text-hover: var(--primary-text-hover);
+
+  --ds-btn-link-text: var(--text-link);
+  --ds-btn-link-text-hover: var(--color-link-hover);
+
+  /* Spacing */
+  --ds-space-0: 0px;
+  --ds-space-0-5: 2px;
+  --ds-space-1: 4px;
+  --ds-space-1-5: 6px;
+  --ds-space-2: 8px;
+  --ds-space-2-5: 10px;
+  --ds-space-3: 12px;
+  --ds-space-3-5: 14px;
+  --ds-space-4: 16px;
+  --ds-space-5: 20px;
+  --ds-space-6: 24px;
+  --ds-space-8: 32px;
+
+  /* Border radius */
+  --ds-radius-none: 0px;
+  --ds-radius-xs: 2px;
+  --ds-radius-sm: 4px;
+  --ds-radius-md: 6px;
+  --ds-radius-lg: 8px;
+  --ds-radius-xl: 12px;
+  --ds-radius-2xl: 16px;
+  --ds-radius-3xl: 20px;
+  --ds-radius-full: 32px;
+
+  /* Shadows */
+  --ds-shadow-sm: 0px 2px 4px rgba(0,0,0,0.02), 0px 1px 6px -1px rgba(0,0,0,0.02), 0px 1px 2px rgba(0,0,0,0.03);
+  --ds-shadow-md: 0px 9px 28px 8px rgba(0,0,0,0.05), 0px 3px 6px -4px rgba(0,0,0,0.12), 0px 6px 16px rgba(0,0,0,0.08);
+  --ds-focus-primary: 0 0 0 2px rgba(108,76,255,0.32);
+  --ds-focus-danger: 0 0 0 2px rgba(225,40,32,0.32);
+  --ds-focus-yellow: 0 0 0 2px rgba(255,140,38,0.32);
+
+  /* Typography */
+  --ds-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--ds-font-family);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ds-color-text-primary);
+  background-color: var(--ds-color-bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
