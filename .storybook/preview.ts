@@ -17,6 +17,7 @@ const preview: Preview = {
         { name: "dark", value: "#131316" },
       ],
     },
+    layout: "padded",
   },
   decorators: [
     (Story, context) => {
@@ -28,8 +29,7 @@ const preview: Preview = {
         {
           "data-theme": isDark ? "dark" : "light",
           style: {
-            padding: "24px",
-            minHeight: "100vh",
+            padding: "16px",
           },
         },
         React.createElement(Story)
