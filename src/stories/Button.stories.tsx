@@ -28,10 +28,10 @@ const meta: Meta<typeof Button> = {
   component: Button,
   tags: ["autodocs"],
   argTypes: {
-    type: {
+    variant: {
       control: "select",
       options: ["primary", "default", "dashed", "text", "link"],
-      description: "Button type",
+      description: "Button variant",
       table: {
         defaultValue: { summary: "default" },
       },
@@ -95,35 +95,35 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    type: "primary",
+    variant: "primary",
     children: "Primary",
   },
 };
 
 export const Default: Story = {
   args: {
-    type: "default",
+    variant: "default",
     children: "Default",
   },
 };
 
 export const Dashed: Story = {
   args: {
-    type: "dashed",
+    variant: "dashed",
     children: "Dashed",
   },
 };
 
 export const Text: Story = {
   args: {
-    type: "text",
+    variant: "text",
     children: "Text",
   },
 };
 
 export const Link: Story = {
   args: {
-    type: "link",
+    variant: "link",
     children: "Link",
   },
 };
@@ -132,15 +132,15 @@ export const AllVariants: Story = {
   render: () => (
     <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
       <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
-        <Button type="primary">Primary</Button>
-        <Button type="default">Default</Button>
-        <Button type="dashed">Dashed</Button>
-        <Button type="text">Text</Button>
-        <Button type="link">Link</Button>
+        <Button variant="primary">Primary</Button>
+        <Button variant="default">Default</Button>
+        <Button variant="dashed">Dashed</Button>
+        <Button variant="text">Text</Button>
+        <Button variant="link">Link</Button>
       </div>
       <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
-        <Button type="primary" danger>Primary Danger</Button>
-        <Button type="default" danger>Default Danger</Button>
+        <Button variant="primary" danger>Primary Danger</Button>
+        <Button variant="default" danger>Default Danger</Button>
       </div>
     </div>
   ),
@@ -149,9 +149,9 @@ export const AllVariants: Story = {
 export const AllSizes: Story = {
   render: () => (
     <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
-      <Button type="primary" size="small">Small</Button>
-      <Button type="primary" size="default">Default</Button>
-      <Button type="primary" size="large">Large</Button>
+      <Button variant="primary" size="small">Small</Button>
+      <Button variant="primary" size="default">Default</Button>
+      <Button variant="primary" size="large">Large</Button>
     </div>
   ),
 };
@@ -160,12 +160,12 @@ export const Ghost: Story = {
   render: () => (
     <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
       <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
-        <Button type="primary" ghost>Primary Ghost</Button>
-        <Button type="default" ghost>Default Ghost</Button>
+        <Button variant="primary" ghost>Primary Ghost</Button>
+        <Button variant="default" ghost>Default Ghost</Button>
       </div>
       <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
-        <Button type="primary" danger ghost>Primary Danger Ghost</Button>
-        <Button type="default" danger ghost>Default Danger Ghost</Button>
+        <Button variant="primary" danger ghost>Primary Danger Ghost</Button>
+        <Button variant="default" danger ghost>Default Danger Ghost</Button>
       </div>
     </div>
   ),
@@ -174,17 +174,17 @@ export const Ghost: Story = {
 export const IconOnly: Story = {
   render: () => (
     <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
-      <Button type="primary" iconOnly icon={<SearchIcon />} />
-      <Button type="default" iconOnly icon={<SearchIcon />} />
-      <Button type="primary" iconOnly icon={<PlusIcon />} shape="circle" />
-      <Button type="default" iconOnly icon={<PlusIcon />} shape="circle" />
+      <Button variant="primary" iconOnly icon={<SearchIcon />} />
+      <Button variant="default" iconOnly icon={<SearchIcon />} />
+      <Button variant="primary" iconOnly icon={<PlusIcon />} shape="circle" />
+      <Button variant="default" iconOnly icon={<PlusIcon />} shape="circle" />
     </div>
   ),
 };
 
 export const WithIconLeft: Story = {
   args: {
-    type: "primary",
+    variant: "primary",
     icon: <SearchIcon />,
     iconPosition: "left",
     children: "Search",
@@ -193,7 +193,7 @@ export const WithIconLeft: Story = {
 
 export const WithIconRight: Story = {
   args: {
-    type: "primary",
+    variant: "primary",
     icon: <ArrowRightIcon />,
     iconPosition: "right",
     children: "Next",
@@ -202,7 +202,7 @@ export const WithIconRight: Story = {
 
 export const Loading: Story = {
   args: {
-    type: "primary",
+    variant: "primary",
     loading: true,
     children: "Loading",
   },
@@ -212,11 +212,11 @@ export const Disabled: Story = {
   render: () => (
     <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
       <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
-        <Button type="primary" disabled>Primary</Button>
-        <Button type="default" disabled>Default</Button>
-        <Button type="dashed" disabled>Dashed</Button>
-        <Button type="text" disabled>Text</Button>
-        <Button type="link" disabled>Link</Button>
+        <Button variant="primary" disabled>Primary</Button>
+        <Button variant="default" disabled>Default</Button>
+        <Button variant="dashed" disabled>Dashed</Button>
+        <Button variant="text" disabled>Text</Button>
+        <Button variant="link" disabled>Link</Button>
       </div>
     </div>
   ),
@@ -225,9 +225,9 @@ export const Disabled: Story = {
 export const Circle: Story = {
   render: () => (
     <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
-      <Button type="primary" shape="circle" iconOnly icon={<SearchIcon />} />
-      <Button type="default" shape="circle" iconOnly icon={<SearchIcon />} />
-      <Button type="primary" danger shape="circle" iconOnly icon={<SearchIcon />} />
+      <Button variant="primary" shape="circle" iconOnly icon={<SearchIcon />} />
+      <Button variant="default" shape="circle" iconOnly icon={<SearchIcon />} />
+      <Button variant="primary" danger shape="circle" iconOnly icon={<SearchIcon />} />
     </div>
   ),
 };

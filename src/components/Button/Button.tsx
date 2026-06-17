@@ -1,8 +1,8 @@
 import React from "react";
 import "./Button.css";
 
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  type?: "primary" | "default" | "dashed" | "text" | "link";
+export interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "type"> {
+  variant?: "primary" | "default" | "dashed" | "text" | "link";
   size?: "small" | "default" | "large";
   ghost?: boolean;
   iconOnly?: boolean;
@@ -14,7 +14,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 }
 
 export const Button: React.FC<ButtonProps> = ({
-  type = "default",
+  variant = "default",
   size = "default",
   ghost = false,
   iconOnly = false,
@@ -30,7 +30,7 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   const classNames = [
     "ds-btn",
-    `ds-btn--${type}`,
+    `ds-btn--${variant}`,
     `ds-btn--${size}`,
     ghost && "ds-btn--ghost",
     iconOnly && "ds-btn--icon-only",
@@ -45,6 +45,7 @@ export const Button: React.FC<ButtonProps> = ({
 
   return (
     <button
+      type="button"
       className={classNames}
       disabled={disabled || loading}
       aria-disabled={disabled || loading}

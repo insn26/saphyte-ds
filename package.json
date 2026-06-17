@@ -9,7 +9,9 @@
     "preview": "vite preview",
     "build:tokens": "node scripts/build-tokens.mjs",
     "build:storybook": "storybook build",
-    "deploy:storybook": "storybook build && gh-pages -d storybook-static",
+    "build:storybook:ghpages": "storybook build -o storybook-static-ghpages",
+    "deploy:storybook": "npm run build:storybook:ghpages && gh-pages -d storybook-static-ghpages --nojekyll",
+    "deploy:chromatic": "npx chromatic --project-token=chpt_0f9d995d7a8b092 --build-script-name=build:storybook",
     "storybook": "storybook dev -p 6006",
     "sync-tokens": "node scripts/sync-tokens.mjs"
   },
