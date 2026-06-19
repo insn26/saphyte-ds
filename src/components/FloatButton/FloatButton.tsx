@@ -1,19 +1,31 @@
 import React from "react";
-import { icons } from "../Icon/icons";
 import "./FloatButton.css";
+
+const DefaultIcon: React.FC<{ size?: number }> = ({ size = 18 }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 18 18"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M2.25 15.75C1.83579 15.75 1.5 15.4142 1.5 15V3C1.5 2.58579 1.83579 2.25 2.25 2.25H7.81065L9.31065 3.75H15C15.4142 3.75 15.75 4.08579 15.75 4.5V6.75H14.25V5.25H8.68935L7.18934 3.75H3V12.7485L4.125 8.25H16.875L15.142 15.1819C15.0586 15.5158 14.7586 15.75 14.4144 15.75H2.25ZM14.9538 9.75H5.29616L4.17116 14.25H13.8288L14.9538 9.75Z"
+      fill="currentColor"
+    />
+  </svg>
+);
 
 export interface FloatButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   type?: "default" | "primary";
   shape?: "circle" | "square";
-  icon?: string;
   iconNode?: React.ReactNode;
 }
 
 export const FloatButton: React.FC<FloatButtonProps> = ({
   type = "default",
   shape = "circle",
-  icon = "folder-open-line",
   iconNode,
   className = "",
   style,
@@ -29,21 +41,13 @@ export const FloatButton: React.FC<FloatButtonProps> = ({
     .filter(Boolean)
     .join(" ");
 
-  const iconSize = 18;
-  const renderIcon = iconNode || (icon && icons[icon] ? (
-    <span
-      className="ds-float-btn-icon"
-      dangerouslySetInnerHTML={{
-        __html: icons[icon]
-          .replace(/<svg/, `<svg width="${iconSize}" height="${iconSize}"`)
-          .replace(/fill="[^"]*"/g, 'fill="currentColor"'),
-      }}
-    />
-  ) : null);
-
   return (
     <button className={classNames} style={style} {...props}>
-      {children || renderIcon}
+      {children || (
+        <span className="ds-float-btn-icon">
+          {iconNode || <DefaultIcon />}
+        </span>
+      )}
     </button>
   );
 };
