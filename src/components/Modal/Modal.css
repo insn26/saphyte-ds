@@ -1,0 +1,141 @@
+/* ==== Modal ==== */
+.ds-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.ds-modal--fullscreen {
+  padding: 0;
+}
+
+.ds-modal--open {
+  animation: ds-modal-fade 0.15s ease-out;
+}
+
+@keyframes ds-modal-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ==== Overlay ==== */
+.ds-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+/* ==== Content ==== */
+.ds-modal__content {
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  color: #18181b;
+  border-radius: 8px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  max-height: calc(100vh - 32px);
+  animation: ds-modal-zoom 0.2s ease-out;
+  outline: none;
+}
+
+@keyframes ds-modal-zoom {
+  from {
+    transform: scale(0.96);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.ds-modal--fullscreen .ds-modal__content {
+  width: 100% !important;
+  height: 100%;
+  max-height: 100vh;
+  border-radius: 0;
+}
+
+.ds-modal__content--full {
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  border-radius: 0;
+}
+
+/* ==== Header ==== */
+.ds-modal__header {
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid #e4e4e7;
+  font-size: 16px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.ds-modal__header:empty {
+  display: none;
+}
+
+/* ==== Body ==== */
+.ds-modal__body {
+  padding: 20px;
+  flex: 1;
+  overflow-y: auto;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #52525b;
+}
+
+/* ==== Footer ==== */
+.ds-modal__footer {
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  border-top: 1px solid #e4e4e7;
+  flex-shrink: 0;
+}
+
+.ds-modal__footer:empty {
+  display: none;
+}
+
+/* ==== Close ==== */
+.ds-modal__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #71717a;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.ds-modal__close:hover {
+  background: #f4f4f5;
+  color: #18181b;
+}
+
+.ds-modal__close:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(93, 66, 230, 0.4);
+}

@@ -1,0 +1,67 @@
+/* ==== Breadcrumb Base ==== */
+.ds-breadcrumb {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.ds-breadcrumb__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ds-breadcrumb__list--sm {
+  font-size: 12px;
+  gap: 4px;
+}
+
+.ds-breadcrumb__list--md {
+  font-size: 14px;
+  gap: 6px;
+}
+
+.ds-breadcrumb__list--lg {
+  font-size: 16px;
+  gap: 8px;
+}
+
+.ds-breadcrumb__item {
+  display: inline-flex;
+  align-items: center;
+  list-style: none;
+}
+
+.ds-breadcrumb__separator {
+  display: inline-flex;
+  align-items: center;
+  color: #a1a1aa;
+  user-select: none;
+  list-style: none;
+  font-size: inherit;
+  line-height: 1;
+}
+
+.ds-breadcrumb__link {
+  color: #5d42e6;
+  text-decoration: none;
+  transition: color 0.15s;
+  border-radius: 4px;
+}
+
+.ds-breadcrumb__link:hover {
+  color: #4c34c8;
+  text-decoration: underline;
+}
+
+.ds-breadcrumb__link:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(93, 66, 230, 0.4);
+}
+
+.ds-breadcrumb__current {
+  color: #52525b;
+  font-weight: 500;
+  cursor: default;
+}

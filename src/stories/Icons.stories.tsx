@@ -5,120 +5,91 @@ import { Icon, iconNames } from "../components/Icon/Icon";
 const meta: Meta<typeof Icon> = {
   title: "Components/Icon",
   component: Icon,
-  parameters: {
-    layout: "padded",
-  },
+  parameters: { layout: "centered" },
   tags: ["autodocs"],
   argTypes: {
     name: {
       control: "select",
-      options: iconNames,
-      description: "Icon name",
+      options: iconNames.slice(0, 50),
+      description: "Icon name (1508 available)",
     },
     size: {
       control: "number",
-      description: "Icon size in pixels",
-      table: {
-        defaultValue: { summary: "16" },
-      },
+      table: { defaultValue: { summary: "16" } },
     },
   },
 };
-
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {
-    name: "SearchOutlined",
-    size: 24,
-  },
+  args: { name: "circle", size: 24 },
 };
 
 export const AllSizes: Story = {
   render: () => (
-    <div style={{ display: "flex", gap: "16px", alignItems: "center" }}>
-      <Icon name="SearchOutlined" size={12} />
-      <Icon name="SearchOutlined" size={16} />
-      <Icon name="SearchOutlined" size={20} />
-      <Icon name="SearchOutlined" size={24} />
-      <Icon name="SearchOutlined" size={32} />
-      <Icon name="SearchOutlined" size={40} />
+    <div style={{ display: "flex", gap: 16, alignItems: "center" }}>
+      <Icon name="circle" size={12} />
+      <Icon name="circle" size={16} />
+      <Icon name="circle" size={20} />
+      <Icon name="circle" size={24} />
+      <Icon name="circle" size={32} />
+      <Icon name="circle" size={40} />
     </div>
   ),
 };
 
-export const CommonIcons: Story = {
+export const Common: Story = {
   render: () => (
-    <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
-      <div>
-        <h3 style={{ fontSize: "14px", fontWeight: 600, marginBottom: "12px" }}>Navigation</h3>
-        <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-          {["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "Left", "Right", "Up", "Down", "Backward", "Forward", "Rollback"].map((name) => (
-            <IconItem key={name} name={name} />
-          ))}
+    <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+      {["circle", "square", "check", "x", "arrow-right", "arrow-left", "plus", "minus", "search", "settings", "user", "home", "mail", "bell", "calendar", "clock", "heart", "star", "trash", "edit", "eye", "download", "upload", "share"].map((name) => (
+        <div key={name} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 4, padding: 8, border: "1px solid #e4e4e7", borderRadius: 6, minWidth: 60 }}>
+          <Icon name={name} size={20} />
+          <span style={{ fontSize: 10, color: "#71717a" }}>{name}</span>
         </div>
-      </div>
-      <div>
-        <h3 style={{ fontSize: "14px", fontWeight: 600, marginBottom: "12px" }}>Actions</h3>
-        <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-          {["Plus", "Minus", "Close", "Check", "Search", "Edit", "Delete", "Copy", "Download", "Upload", "Share"].map((name) => (
-            <IconItem key={name} name={name} />
-          ))}
-        </div>
-      </div>
-      <div>
-        <h3 style={{ fontSize: "14px", fontWeight: 600, marginBottom: "12px" }}>Status</h3>
-        <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-          {["CheckCircle", "CloseCircle", "ExclamationCircle", "InfoCircle", "Warning", "QuestionCircle", "Bell", "Lock", "Unlock", "Eye", "EyeInvisible"].map((name) => (
-            <IconItem key={name} name={name} />
-          ))}
-        </div>
-      </div>
-      <div>
-        <h3 style={{ fontSize: "14px", fontWeight: 600, marginBottom: "12px" }}>Files</h3>
-        <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-          {["File", "Folder", "FileText", "FileAdd", "FolderAdd", "FileExcel", "FileImage", "FilePdf", "FileWord", "FileZip", "Inbox"].map((name) => (
-            <IconItem key={name} name={name} />
-          ))}
-        </div>
-      </div>
-      <div>
-        <h3 style={{ fontSize: "14px", fontWeight: 600, marginBottom: "12px" }}>User</h3>
-        <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-          {["User", "UserAdd", "UserDelete", "Team", "UserOutlined", "Contacts", "Idcard", "Profile"].map((name) => (
-            <IconItem key={name} name={name} />
-          ))}
-        </div>
-      </div>
-    </div>
-  ),
-};
-
-const IconItem: React.FC<{ name: string }> = ({ name }) => (
-  <div
-    style={{
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      gap: "4px",
-      padding: "12px",
-      border: "1px solid #e5e9f0",
-      borderRadius: "8px",
-      minWidth: "80px",
-    }}
-  >
-    <Icon name={name} size={20} />
-    <span style={{ fontSize: "10px", color: "#69738d", textAlign: "center" }}>{name}</span>
-  </div>
-);
-
-export const AllIcons: Story = {
-  render: () => (
-    <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
-      {iconNames.map((name) => (
-        <IconItem key={name} name={name} />
       ))}
     </div>
   ),
+};
+
+export const InButton: Story = {
+  render: () => (
+    <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+      <button style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "6px 12px", borderRadius: 4, background: "#5d42e6", color: "white", border: "none" }}>
+        <Icon name="plus" size={14} /> Add
+      </button>
+      <button style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "6px 12px", borderRadius: 4, background: "transparent", color: "#27272a", border: "1px solid #d4d4d8" }}>
+        <Icon name="download" size={14} /> Download
+      </button>
+      <button style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "6px 12px", borderRadius: 4, background: "transparent", color: "#991919", border: "none" }}>
+        <Icon name="trash" size={14} /> Delete
+      </button>
+    </div>
+  ),
+};
+
+export const WithColor: Story = {
+  render: () => (
+    <div style={{ display: "flex", gap: 16 }}>
+      <div style={{ color: "#5d42e6" }}><Icon name="star" size={32} /></div>
+      <div style={{ color: "#ef4444" }}><Icon name="heart" size={32} /></div>
+      <div style={{ color: "#22c55e" }}><Icon name="check" size={32} /></div>
+      <div style={{ color: "#eab308" }}><Icon name="star" size={32} /></div>
+      <div style={{ color: "#3b82f6" }}><Icon name="info" size={32} /></div>
+    </div>
+  ),
+};
+
+export const AllIcons: Story = {
+  render: () => (
+    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(80px, 1fr))", gap: 8, padding: 16, maxWidth: 1200 }}>
+      {iconNames.map((name) => (
+        <div key={name} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 4, padding: 8, border: "1px solid #f4f4f5", borderRadius: 6 }}>
+          <Icon name={name} size={18} />
+          <span style={{ fontSize: 9, color: "#71717a", textAlign: "center", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", width: "100%" }}>{name}</span>
+        </div>
+      ))}
+    </div>
+  ),
+  parameters: { layout: "fullscreen" },
 };

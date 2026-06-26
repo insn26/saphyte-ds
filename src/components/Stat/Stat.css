@@ -1,0 +1,67 @@
+/* ==== Stat Base ==== */
+.ds-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #18181b;
+}
+
+/* ==== Stat Group ==== */
+.ds-stat-group {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+/* ==== Label ==== */
+.ds-stat__label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #71717a;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+}
+
+/* ==== Number ==== */
+.ds-stat__number {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #18181b;
+  letter-spacing: -0.02em;
+}
+
+/* ==== Help Text ==== */
+.ds-stat__help-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #71717a;
+  line-height: 1.4;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ==== Arrow ==== */
+.ds-stat__arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.ds-stat__arrow--up {
+  color: #16a34a;
+}
+
+.ds-stat__arrow--down {
+  color: #dc2626;
+}
+
+.ds-stat__arrow--flat {
+  color: #71717a;
+}

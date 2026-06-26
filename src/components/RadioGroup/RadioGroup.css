@@ -1,0 +1,118 @@
+/* ==== RadioGroup ==== */
+.ds-radio-group {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #18181b;
+}
+
+/* ==== Radio Item ==== */
+.ds-radio {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+.ds-radio--disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.ds-radio__input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.ds-radio__control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  border: 2px solid #d4d4d8;
+  background: #ffffff;
+  flex-shrink: 0;
+  transition: border-color 0.15s, background-color 0.15s;
+  margin-top: 1px;
+}
+
+.ds-radio--sm .ds-radio__control {
+  width: 14px;
+  height: 14px;
+}
+
+.ds-radio--lg .ds-radio__control {
+  width: 22px;
+  height: 22px;
+}
+
+.ds-radio__dot {
+  display: inline-flex;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffffff;
+  transform: scale(0);
+  transition: transform 0.15s;
+}
+
+.ds-radio--sm .ds-radio__dot {
+  width: 6px;
+  height: 6px;
+}
+
+.ds-radio--lg .ds-radio__dot {
+  width: 10px;
+  height: 10px;
+}
+
+.ds-radio__control--checked {
+  background: #5d42e6;
+  border-color: #5d42e6;
+}
+
+.ds-radio__control--checked .ds-radio__dot {
+  transform: scale(1);
+}
+
+.ds-radio__input:focus-visible + .ds-radio__control {
+  box-shadow: 0 0 0 3px rgba(93, 66, 230, 0.4);
+}
+
+.ds-radio__label {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.ds-radio__label-text {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #18181b;
+}
+
+.ds-radio--sm .ds-radio__label-text {
+  font-size: 13px;
+}
+
+.ds-radio--lg .ds-radio__label-text {
+  font-size: 15px;
+}
+
+.ds-radio__description {
+  font-size: 12px;
+  line-height: 1.4;
+  color: #71717a;
+}
+
+.ds-radio--lg .ds-radio__description {
+  font-size: 13px;
+}

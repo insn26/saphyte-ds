@@ -1,0 +1,35 @@
+/* ==== Skeleton Base ==== */
+.ds-skeleton {
+  display: block;
+  background: #f4f4f5;
+  background: linear-gradient(
+    90deg,
+    #f4f4f5 0%,
+    #e4e4e7 50%,
+    #f4f4f5 100%
+  );
+  background-size: 200% 100%;
+  animation: ds-skeleton-pulse 1.4s ease-in-out infinite;
+  border-radius: 4px;
+}
+
+.ds-skeleton--text {
+  border-radius: 4px;
+}
+
+.ds-skeleton--circle {
+  border-radius: 50%;
+}
+
+.ds-skeleton--rect {
+  border-radius: 6px;
+}
+
+@keyframes ds-skeleton-pulse {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

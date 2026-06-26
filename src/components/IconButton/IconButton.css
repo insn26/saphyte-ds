@@ -1,0 +1,205 @@
+/* ==== IconButton Base ==== */
+.ds-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  border: 1px solid transparent;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 4px;
+  transition: background-color 0.15s, border-color 0.15s, color 0.15s, opacity 0.15s;
+  outline: none;
+  flex-shrink: 0;
+}
+
+.ds-icon-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.ds-icon-button:focus-visible {
+  box-shadow: 0 0 0 3px rgba(93, 66, 230, 0.6);
+}
+
+/* ==== Sizes ==== */
+.ds-icon-button--2xs { font-size: 12px; }
+.ds-icon-button--xs { font-size: 14px; }
+.ds-icon-button--sm { font-size: 14px; }
+.ds-icon-button--md { font-size: 16px; }
+.ds-icon-button--lg { font-size: 18px; border-radius: 6px; }
+
+/* ==== SOLID ==== */
+.ds-icon-button--solid.ds-icon-button--gray { background: #18181b; color: #ffffff; }
+.ds-icon-button--solid.ds-icon-button--gray:hover:not(:disabled) { background: #27272a; }
+
+.ds-icon-button--solid.ds-icon-button--danger { background: #dc2626; color: #ffffff; }
+.ds-icon-button--solid.ds-icon-button--danger:hover:not(:disabled) { background: #b91c1c; }
+
+.ds-icon-button--solid.ds-icon-button--pink { background: #db2777; color: #ffffff; }
+.ds-icon-button--solid.ds-icon-button--pink:hover:not(:disabled) { background: #be185d; }
+
+.ds-icon-button--solid.ds-icon-button--purple { background: #9333ea; color: #ffffff; }
+.ds-icon-button--solid.ds-icon-button--purple:hover:not(:disabled) { background: #7e22ce; }
+
+.ds-icon-button--solid.ds-icon-button--cyan { background: #0891b2; color: #ffffff; }
+.ds-icon-button--solid.ds-icon-button--cyan:hover:not(:disabled) { background: #0e7490; }
+
+.ds-icon-button--solid.ds-icon-button--saphyte { background: #5d42e6; color: #ffffff; }
+.ds-icon-button--solid.ds-icon-button--saphyte:hover:not(:disabled) { background: #4c34c8; }
+
+.ds-icon-button--solid.ds-icon-button--info { background: #2563eb; color: #ffffff; }
+.ds-icon-button--solid.ds-icon-button--info:hover:not(:disabled) { background: #1d4ed8; }
+
+.ds-icon-button--solid.ds-icon-button--teal { background: #0d9488; color: #ffffff; }
+.ds-icon-button--solid.ds-icon-button--teal:hover:not(:disabled) { background: #0f766e; }
+
+.ds-icon-button--solid.ds-icon-button--success { background: #16a34a; color: #ffffff; }
+.ds-icon-button--solid.ds-icon-button--success:hover:not(:disabled) { background: #15803d; }
+
+.ds-icon-button--solid.ds-icon-button--yellow { background: #fde047; color: #000000; }
+.ds-icon-button--solid.ds-icon-button--yellow:hover:not(:disabled) { background: #facc15; }
+
+.ds-icon-button--solid.ds-icon-button--warning { background: #ea580c; color: #ffffff; }
+.ds-icon-button--solid.ds-icon-button--warning:hover:not(:disabled) { background: #c2410c; }
+
+/* ==== SUBTLE ==== */
+.ds-icon-button--subtle.ds-icon-button--gray { background: #f4f4f5; color: #27272a; }
+.ds-icon-button--subtle.ds-icon-button--gray:hover:not(:disabled) { background: #e4e4e7; }
+
+.ds-icon-button--subtle.ds-icon-button--danger { background: #fee2e2; color: #991919; }
+.ds-icon-button--subtle.ds-icon-button--danger:hover:not(:disabled) { background: #fecaca; }
+
+.ds-icon-button--subtle.ds-icon-button--pink { background: #fce7f3; color: #a41752; }
+.ds-icon-button--subtle.ds-icon-button--pink:hover:not(:disabled) { background: #fbcfe8; }
+
+.ds-icon-button--subtle.ds-icon-button--purple { background: #f3e8ff; color: #641ba3; }
+.ds-icon-button--subtle.ds-icon-button--purple:hover:not(:disabled) { background: #e9d5ff; }
+
+.ds-icon-button--subtle.ds-icon-button--cyan { background: #cffafe; color: #0c5c72; }
+.ds-icon-button--subtle.ds-icon-button--cyan:hover:not(:disabled) { background: #a5f3fc; }
+
+.ds-icon-button--subtle.ds-icon-button--saphyte { background: #ebe7ff; color: #4c34c8; }
+.ds-icon-button--subtle.ds-icon-button--saphyte:hover:not(:disabled) { background: #ddd6fe; }
+
+.ds-icon-button--subtle.ds-icon-button--info { background: #dbeafe; color: #173da6; }
+.ds-icon-button--subtle.ds-icon-button--info:hover:not(:disabled) { background: #bfdbfe; }
+
+.ds-icon-button--subtle.ds-icon-button--teal { background: #ccfbf1; color: #0c5d56; }
+.ds-icon-button--subtle.ds-icon-button--teal:hover:not(:disabled) { background: #99f6e4; }
+
+.ds-icon-button--subtle.ds-icon-button--success { background: #dcfce7; color: #116932; }
+.ds-icon-button--subtle.ds-icon-button--success:hover:not(:disabled) { background: #bbf7d0; }
+
+.ds-icon-button--subtle.ds-icon-button--yellow { background: #fef9c3; color: #713f12; }
+.ds-icon-button--subtle.ds-icon-button--yellow:hover:not(:disabled) { background: #fef08a; }
+
+.ds-icon-button--subtle.ds-icon-button--warning { background: #ffedd5; color: #92310a; }
+.ds-icon-button--subtle.ds-icon-button--warning:hover:not(:disabled) { background: #fed7aa; }
+
+/* ==== SURFACE ==== */
+.ds-icon-button--surface { border: 1px solid; }
+.ds-icon-button--surface.ds-icon-button--gray { background: #f4f4f5; color: #27272a; border-color: #d4d4d8; }
+.ds-icon-button--surface.ds-icon-button--gray:hover:not(:disabled) { background: #e4e4e7; }
+
+.ds-icon-button--surface.ds-icon-button--danger { background: #fee2e2; color: #991919; border-color: #fecaca; }
+.ds-icon-button--surface.ds-icon-button--danger:hover:not(:disabled) { background: #fecaca; }
+
+.ds-icon-button--surface.ds-icon-button--pink { background: #fce7f3; color: #a41752; border-color: #fbcfe8; }
+.ds-icon-button--surface.ds-icon-button--pink:hover:not(:disabled) { background: #fbcfe8; }
+
+.ds-icon-button--surface.ds-icon-button--purple { background: #f3e8ff; color: #641ba3; border-color: #e9d5ff; }
+.ds-icon-button--surface.ds-icon-button--purple:hover:not(:disabled) { background: #e9d5ff; }
+
+.ds-icon-button--surface.ds-icon-button--cyan { background: #cffafe; color: #0c5c72; border-color: #a5f3fc; }
+.ds-icon-button--surface.ds-icon-button--cyan:hover:not(:disabled) { background: #a5f3fc; }
+
+.ds-icon-button--surface.ds-icon-button--saphyte { background: #ebe7ff; color: #4c34c8; border-color: #ddd6fe; }
+.ds-icon-button--surface.ds-icon-button--saphyte:hover:not(:disabled) { background: #ddd6fe; }
+
+.ds-icon-button--surface.ds-icon-button--info { background: #dbeafe; color: #173da6; border-color: #bfdbfe; }
+.ds-icon-button--surface.ds-icon-button--info:hover:not(:disabled) { background: #bfdbfe; }
+
+.ds-icon-button--surface.ds-icon-button--teal { background: #ccfbf1; color: #0c5d56; border-color: #99f6e4; }
+.ds-icon-button--surface.ds-icon-button--teal:hover:not(:disabled) { background: #99f6e4; }
+
+.ds-icon-button--surface.ds-icon-button--success { background: #dcfce7; color: #116932; border-color: #bbf7d0; }
+.ds-icon-button--surface.ds-icon-button--success:hover:not(:disabled) { background: #bbf7d0; }
+
+.ds-icon-button--surface.ds-icon-button--yellow { background: #fef9c3; color: #713f12; border-color: #fde047; }
+.ds-icon-button--surface.ds-icon-button--yellow:hover:not(:disabled) { background: #fef08a; }
+
+.ds-icon-button--surface.ds-icon-button--warning { background: #ffedd5; color: #92310a; border-color: #fed7aa; }
+.ds-icon-button--surface.ds-icon-button--warning:hover:not(:disabled) { background: #fed7aa; }
+
+/* ==== OUTLINE ==== */
+.ds-icon-button--outline { background: transparent; border: 1px solid; }
+.ds-icon-button--outline.ds-icon-button--gray { color: #27272a; border-color: #d4d4d8; }
+.ds-icon-button--outline.ds-icon-button--gray:hover:not(:disabled) { background: #f4f4f5; }
+
+.ds-icon-button--outline.ds-icon-button--danger { color: #991919; border-color: #fecaca; }
+.ds-icon-button--outline.ds-icon-button--danger:hover:not(:disabled) { background: #fee2e2; }
+
+.ds-icon-button--outline.ds-icon-button--pink { color: #a41752; border-color: #fbcfe8; }
+.ds-icon-button--outline.ds-icon-button--pink:hover:not(:disabled) { background: #fce7f3; }
+
+.ds-icon-button--outline.ds-icon-button--purple { color: #641ba3; border-color: #e9d5ff; }
+.ds-icon-button--outline.ds-icon-button--purple:hover:not(:disabled) { background: #f3e8ff; }
+
+.ds-icon-button--outline.ds-icon-button--cyan { color: #0c5c72; border-color: #a5f3fc; }
+.ds-icon-button--outline.ds-icon-button--cyan:hover:not(:disabled) { background: #cffafe; }
+
+.ds-icon-button--outline.ds-icon-button--saphyte { color: #4c34c8; border-color: #ddd6fe; }
+.ds-icon-button--outline.ds-icon-button--saphyte:hover:not(:disabled) { background: #ebe7ff; }
+
+.ds-icon-button--outline.ds-icon-button--info { color: #173da6; border-color: #bfdbfe; }
+.ds-icon-button--outline.ds-icon-button--info:hover:not(:disabled) { background: #dbeafe; }
+
+.ds-icon-button--outline.ds-icon-button--teal { color: #0c5d56; border-color: #99f6e4; }
+.ds-icon-button--outline.ds-icon-button--teal:hover:not(:disabled) { background: #ccfbf1; }
+
+.ds-icon-button--outline.ds-icon-button--success { color: #116932; border-color: #bbf7d0; }
+.ds-icon-button--outline.ds-icon-button--success:hover:not(:disabled) { background: #dcfce7; }
+
+.ds-icon-button--outline.ds-icon-button--yellow { color: #713f12; border-color: #fde047; }
+.ds-icon-button--outline.ds-icon-button--yellow:hover:not(:disabled) { background: #fef9c3; }
+
+.ds-icon-button--outline.ds-icon-button--warning { color: #92310a; border-color: #fed7aa; }
+.ds-icon-button--outline.ds-icon-button--warning:hover:not(:disabled) { background: #ffedd5; }
+
+/* ==== GHOST ==== */
+.ds-icon-button--ghost { background: transparent; }
+.ds-icon-button--ghost.ds-icon-button--gray { color: #27272a; }
+.ds-icon-button--ghost.ds-icon-button--gray:hover:not(:disabled) { background: #f4f4f5; }
+
+.ds-icon-button--ghost.ds-icon-button--danger { color: #991919; }
+.ds-icon-button--ghost.ds-icon-button--danger:hover:not(:disabled) { background: #fee2e2; }
+
+.ds-icon-button--ghost.ds-icon-button--pink { color: #a41752; }
+.ds-icon-button--ghost.ds-icon-button--pink:hover:not(:disabled) { background: #fce7f3; }
+
+.ds-icon-button--ghost.ds-icon-button--purple { color: #641ba3; }
+.ds-icon-button--ghost.ds-icon-button--purple:hover:not(:disabled) { background: #f3e8ff; }
+
+.ds-icon-button--ghost.ds-icon-button--cyan { color: #0c5c72; }
+.ds-icon-button--ghost.ds-icon-button--cyan:hover:not(:disabled) { background: #cffafe; }
+
+.ds-icon-button--ghost.ds-icon-button--saphyte { color: #4c34c8; }
+.ds-icon-button--ghost.ds-icon-button--saphyte:hover:not(:disabled) { background: #ebe7ff; }
+
+.ds-icon-button--ghost.ds-icon-button--info { color: #173da6; }
+.ds-icon-button--ghost.ds-icon-button--info:hover:not(:disabled) { background: #dbeafe; }
+
+.ds-icon-button--ghost.ds-icon-button--teal { color: #0c5d56; }
+.ds-icon-button--ghost.ds-icon-button--teal:hover:not(:disabled) { background: #ccfbf1; }
+
+.ds-icon-button--ghost.ds-icon-button--success { color: #116932; }
+.ds-icon-button--ghost.ds-icon-button--success:hover:not(:disabled) { background: #dcfce7; }
+
+.ds-icon-button--ghost.ds-icon-button--yellow { color: #713f12; }
+.ds-icon-button--ghost.ds-icon-button--yellow:hover:not(:disabled) { background: #fef9c3; }
+
+.ds-icon-button--ghost.ds-icon-button--warning { color: #92310a; }
+.ds-icon-button--ghost.ds-icon-button--warning:hover:not(:disabled) { background: #ffedd5; }

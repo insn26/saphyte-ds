@@ -1,198 +1,324 @@
 {
-  "$type": "number",
-  "size0": {
-    "$type": "number",
-    "$value": 0,
-    "$description": "No Space"
+  "color": {
+    "gray": {
+      "50": "#fafafa",
+      "100": "#f4f4f5",
+      "200": "#e4e4e7",
+      "300": "#d4d4d8",
+      "400": "#a1a1aa",
+      "500": "#71717a",
+      "600": "#111111"
+    },
+    "red": {
+      "50": "#fef2f2",
+      "100": "#fee2e2",
+      "200": "#fecaca",
+      "300": "#fca5a5",
+      "400": "#f87171",
+      "500": "#ef4444",
+      "600": "#dc2626",
+      "700": "#991919",
+      "800": "#511111",
+      "900": "#300c0c",
+      "950": "#1f0808"
+    },
+    "pink": {
+      "50": "#fdf2f8",
+      "100": "#fce7f3",
+      "200": "#fbcfe8",
+      "300": "#f9a8d4",
+      "400": "#f472b6",
+      "500": "#ec4899",
+      "600": "#db2777",
+      "700": "#a41752",
+      "800": "#6d0e34",
+      "900": "#45061f",
+      "950": "#2c0514"
+    },
+    "purple": {
+      "50": "#faf5ff",
+      "100": "#f3e8ff",
+      "200": "#e9d5ff",
+      "300": "#d8b4fe",
+      "400": "#c084fc",
+      "500": "#a855f7",
+      "600": "#9333ea",
+      "700": "#641ba3",
+      "800": "#4a1772",
+      "900": "#2f0553",
+      "950": "#1a032e"
+    },
+    "cyan": {
+      "50": "#ecfeff",
+      "100": "#cffafe",
+      "200": "#a5f3fc",
+      "300": "#67e8f9",
+      "400": "#22d3ee",
+      "500": "#06b6d4",
+      "600": "#0891b2",
+      "700": "#0c5c72",
+      "800": "#134152",
+      "900": "#072a38",
+      "950": "#051b24"
+    },
+    "blue": {
+      "50": "#eff6ff",
+      "100": "#dbeafe",
+      "200": "#bfdbfe",
+      "300": "#a3cfff",
+      "400": "#60a5fa",
+      "500": "#3b82f6",
+      "600": "#2563eb",
+      "700": "#173da6",
+      "800": "#1a3478",
+      "900": "#14204a",
+      "950": "#0c142e"
+    },
+    "teal": {
+      "50": "#f0fdfa",
+      "100": "#ccfbf1",
+      "200": "#99f6e4",
+      "300": "#5eead4",
+      "400": "#2dd4bf",
+      "500": "#14b8a6",
+      "600": "#0d9488",
+      "700": "#0c5d56",
+      "800": "#114240",
+      "900": "#032726",
+      "950": "#021716"
+    },
+    "green": {
+      "50": "#f0fdf4",
+      "100": "#dcfce7",
+      "200": "#bbf7d0",
+      "300": "#86efac",
+      "400": "#4ade80",
+      "500": "#22c55e",
+      "600": "#16a34a",
+      "700": "#116932",
+      "800": "#124a28",
+      "900": "#042713",
+      "950": "#03190c"
+    },
+    "yellow": {
+      "50": "#fefce8",
+      "100": "#fef9c3",
+      "200": "#fef08a",
+      "300": "#fde047",
+      "400": "#facc15",
+      "500": "#eab308",
+      "600": "#ca8a04",
+      "700": "#845209",
+      "800": "#713f12",
+      "900": "#422006",
+      "950": "#281304"
+    },
+    "orange": {
+      "50": "#fff7ed",
+      "100": "#ffedd5",
+      "200": "#fed7aa",
+      "300": "#fdba74",
+      "400": "#fb923c",
+      "500": "#f97316",
+      "600": "#ea580c",
+      "700": "#92310a",
+      "800": "#6c2710",
+      "900": "#3b1106",
+      "950": "#220a04"
+    },
+    "orange.alt": {
+      "50": "#f5f3ff",
+      "100": "#ebe7ff",
+      "200": "#d8d0ff",
+      "300": "#bdaeff",
+      "400": "#9b83ff",
+      "500": "#795cf4",
+      "600": "#5d42e6",
+      "700": "#4c34c8",
+      "800": "#3f2ca3",
+      "900": "#352780",
+      "950": "#20184d"
+    }
   },
-  "sizeXXS": {
-    "$type": "number",
-    "$value": 4,
-    "$description": "Very small spacing, used for minimal gaps between tightly related elements."
+  "typography": {
+    "xs": {
+      "fontSize": 12.0,
+      "fontWeight": 400,
+      "lineHeight": 16.0,
+      "letterSpacing": 0.0
+    },
+    "sm": {
+      "fontSize": 14.0,
+      "fontWeight": 400,
+      "lineHeight": 20.0,
+      "letterSpacing": 0.0
+    },
+    "md": {
+      "fontSize": 16.0,
+      "fontWeight": 400,
+      "lineHeight": 24.0,
+      "letterSpacing": 0.0
+    },
+    "lg": {
+      "fontSize": 18.0,
+      "fontWeight": 500,
+      "lineHeight": 28.0,
+      "letterSpacing": 0.0
+    },
+    "xl": {
+      "fontSize": 20.0,
+      "fontWeight": 400,
+      "lineHeight": 30.0,
+      "letterSpacing": 0.0
+    },
+    "2xl": {
+      "fontSize": 24.0,
+      "fontWeight": 400,
+      "lineHeight": 32.0,
+      "letterSpacing": 0.0
+    },
+    "3xl": {
+      "fontSize": 30.0,
+      "fontWeight": 400,
+      "lineHeight": 38.0,
+      "letterSpacing": 0.0
+    },
+    "4xl": {
+      "fontSize": 36.0,
+      "fontWeight": 400,
+      "lineHeight": 44.0,
+      "letterSpacing": -0.4000000059604645
+    },
+    "5xl": {
+      "fontSize": 48.0,
+      "fontWeight": 400,
+      "lineHeight": 60.0,
+      "letterSpacing": -0.4000000059604645
+    },
+    "6xl": {
+      "fontSize": 60.0,
+      "fontWeight": 400,
+      "lineHeight": 72.0,
+      "letterSpacing": -0.4000000059604645
+    },
+    "7xl": {
+      "fontSize": 72.0,
+      "fontWeight": 400,
+      "lineHeight": 92.0,
+      "letterSpacing": -0.4000000059604645
+    }
   },
-  "sizeXS": {
-    "$type": "number",
-    "$value": 8,
-    "$description": "Small spacing, suitable for padding in compact UI elements like small buttons or between inline items."
+  "spacing": {
+    "0": "0px",
+    "1": "4px",
+    "2": "8px",
+    "3": "12px",
+    "4": "16px",
+    "5": "20px",
+    "6": "24px",
+    "7": "28px",
+    "8": "32px",
+    "9": "36px",
+    "10": "40px",
+    "11": "44px",
+    "12": "48px",
+    "13": "52px",
+    "14": "56px",
+    "15": "60px",
+    "16": "64px",
+    "17": "68px",
+    "18": "72px",
+    "19": "76px",
+    "20": "80px",
+    "21": "84px",
+    "22": "88px",
+    "23": "92px",
+    "24": "96px",
+    "25": "100px",
+    "26": "104px",
+    "27": "108px",
+    "28": "112px",
+    "29": "116px",
+    "30": "120px",
+    "31": "124px",
+    "32": "128px",
+    "33": "132px",
+    "34": "136px",
+    "35": "140px",
+    "36": "144px",
+    "37": "148px",
+    "38": "152px",
+    "39": "156px",
+    "40": "160px",
+    "41": "164px",
+    "42": "168px",
+    "43": "172px",
+    "44": "176px",
+    "45": "180px",
+    "46": "184px",
+    "47": "188px",
+    "48": "192px",
+    "49": "196px",
+    "50": "200px",
+    "51": "204px",
+    "52": "208px",
+    "53": "212px",
+    "54": "216px",
+    "55": "220px",
+    "56": "224px",
+    "57": "228px",
+    "58": "232px",
+    "59": "236px",
+    "60": "240px",
+    "61": "244px",
+    "62": "248px",
+    "63": "252px",
+    "64": "256px",
+    "0.5": "2px",
+    "1.5": "6px",
+    "2.5": "10px",
+    "3.5": "14px",
+    "72": "288px",
+    "80": "320px",
+    "96": "384px"
   },
-  "sizeSM": {
-    "$type": "number",
-    "$value": 12,
-    "$description": "Small-Medium spacing, providing a comfortable gap for smaller components."
+  "radii": {
+    "none": "0",
+    "xs": "2px",
+    "sm": "4px",
+    "base": "6px",
+    "md": "8px",
+    "lg": "12px",
+    "xl": "16px",
+    "2xl": "24px",
+    "3xl": "32px",
+    "full": "9999px"
   },
-  "size": {
-    "$type": "number",
-    "$value": 14,
-    "$description": "Default text size."
+  "sizes": {
+    "xs": "1.5rem",
+    "sm": "2rem",
+    "md": "2.5rem",
+    "lg": "3rem",
+    "xl": "3.5rem",
+    "2xl": "4rem"
   },
-  "sizeMS": {
-    "$type": "number",
-    "$value": 16,
-    "$description": "Medium-Small spacing, often used for standard padding in buttons or input fields."
+  "breakpoints": {
+    "base": "0em",
+    "sm": "30em",
+    "md": "48em",
+    "lg": "62em",
+    "xl": "80em",
+    "2xl": "96em"
   },
-  "sizeMD": {
-    "$type": "number",
-    "$value": 20,
-    "$description": "Medium spacing, used for moderate padding in components."
-  },
-  "sizeLG": {
-    "$type": "number",
-    "$value": 24,
-    "$description": "Large spacing, suitable for padding in larger UI elements like cards or sections."
-  },
-  "sizeXL": {
-    "$type": "number",
-    "$value": 32,
-    "$description": "Extra-Large spacing, used for significant gaps between major sections or larger padding."
-  },
-  "sizeXXL": {
-    "$type": "number",
-    "$value": 48,
-    "$description": "Extra-Extra-Large spacing, used for major section separations or prominent padding."
-  },
-  "controlHeight": {
-    "$type": "number",
-    "$value": 32,
-    "$description": "Default control height."
-  },
-  "controlHeightXS": {
-    "$type": "number",
-    "$value": 16,
-    "$description": "XS control height."
-  },
-  "controlHeightSM": {
-    "$type": "number",
-    "$value": 24,
-    "$description": "SM control height."
-  },
-  "controlHeightLG": {
-    "$type": "number",
-    "$value": 40,
-    "$description": "LG control height."
-  },
-  "PaddingXXS": {
-    "$type": "number",
-    "$value": "{sizeXXS}",
-    "$description": "Extra extra small padding."
-  },
-  "PaddingXS": {
-    "$type": "number",
-    "$value": "{sizeXS}",
-    "$description": "Extra small padding."
-  },
-  "PaddingSM": {
-    "$type": "number",
-    "$value": "{sizeSM}",
-    "$description": "Small padding."
-  },
-  "Padding": {
-    "$type": "number",
-    "$value": "{sizeMS}",
-    "$description": "Default padding."
-  },
-  "PaddingMS": {
-    "$type": "number",
-    "$value": "{sizeMD}",
-    "$description": "Medium small padding."
-  },
-  "PaddingMD": {
-    "$type": "number",
-    "$value": "{sizeLG}",
-    "$description": "Medium padding."
-  },
-  "PaddingLG": {
-    "$type": "number",
-    "$value": "{sizeXL}",
-    "$description": "Large padding."
-  },
-  "PaddingXXL": {
-    "$type": "number",
-    "$value": "{sizeXXL}",
-    "$description": "Extra extra large padding."
-  },
-  "MarginXXS": {
-    "$type": "number",
-    "$value": "{sizeXXS}",
-    "$description": "Extra extra small margin."
-  },
-  "MarginXS": {
-    "$type": "number",
-    "$value": "{sizeXS}",
-    "$description": "Extra small margin."
-  },
-  "MarginSM": {
-    "$type": "number",
-    "$value": "{sizeSM}",
-    "$description": "Small margin."
-  },
-  "Margin": {
-    "$type": "number",
-    "$value": "{sizeMS}",
-    "$description": "Default margin."
-  },
-  "MarginMS": {
-    "$type": "number",
-    "$value": "{sizeMD}",
-    "$description": "Medium small margin."
-  },
-  "MarginMD": {
-    "$type": "number",
-    "$value": "{sizeLG}",
-    "$description": "Medium margin."
-  },
-  "MarginLG": {
-    "$type": "number",
-    "$value": "{sizeXL}",
-    "$description": "Large margin."
-  },
-  "MarginXXL": {
-    "$type": "number",
-    "$value": "{sizeXXL}",
-    "$description": "Extra extra large margin."
-  },
-  "borderRadius0": {
-    "$type": "number",
-    "$value": 0,
-    "$description": "No border radius."
-  },
-  "borderRadiusXS": {
-    "$type": "number",
-    "$value": 2,
-    "$description": "Extra small border radius."
-  },
-  "borderRadiusSM": {
-    "$type": "number",
-    "$value": 4,
-    "$description": "Small border radius."
-  },
-  "borderRadius": {
-    "$type": "number",
-    "$value": 6,
-    "$description": "Default border radius."
-  },
-  "borderRadiusLG": {
-    "$type": "number",
-    "$value": 8,
-    "$description": "Large border radius."
-  },
-  "borderRadius12": {
-    "$type": "number",
-    "$value": 12,
-    "$description": "12px border radius."
-  },
-  "borderRadius16": {
-    "$type": "number",
-    "$value": 16,
-    "$description": "16px border radius."
-  },
-  "borderRadius24": {
-    "$type": "number",
-    "$value": 20,
-    "$description": "24px border radius."
-  },
-  "borderRadius32": {
-    "$type": "number",
-    "$value": 32,
-    "$description": "32px border radius."
+  "shadows": {
+    "xs": "0 0 0 1px rgba(0, 0, 0, 0.05)",
+    "sm": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+    "base": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+    "md": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+    "lg": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+    "xl": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+    "2xl": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+    "inner": "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)",
+    "outline": "0 0 0 3px rgba(66, 153, 225, 0.6)"
   }
 }

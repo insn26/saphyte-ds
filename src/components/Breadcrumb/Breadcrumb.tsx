@@ -1,0 +1,186 @@
+import React from "react";
+import "./Breadcrumb.css";
+
+export type BreadcrumbSize = "sm" | "md" | "lg";
+export type BreadcrumbSeparatorChar = "/" | ">" | "→" | "•" | "-";
+
+export interface BreadcrumbProps extends React.HTMLAttributes<HTMLElement> {
+  separator?: React.ReactNode;
+  spacing?: string;
+  size?: BreadcrumbSize;
+  children?: React.ReactNode;
+}
+
+interface BreadcrumbContextValue {
+  separator: React.ReactNode;
+  size: BreadcrumbSize;
+}
+
+const BreadcrumbContext = React.createContext<BreadcrumbContextValue | null>(null);
+
+const useBreadcrumbContext = (): BreadcrumbContextValue => {
+  const ctx = React.useContext(BreadcrumbContext);
+  if (!ctx) {
+    throw new Error(
+      "Breadcrumb subcomponents must be used within <Breadcrumb />"
+    );
+  }
+  return ctx;
+};
+
+export const Breadcrumb = React.forwardRef<HTMLElement, BreadcrumbProps>(
+  (
+    {
+      separator = "/",
+      size = "md",
+      className = "",
+      children,
+      ...props
+    },
+    ref
+  ) => {
+    const value = React.useMemo<BreadcrumbContextValue>(
+      () => ({ separator, size }),
+      [separator, size]
+    );
+
+    const items = React.Children.toArray(children);
+    const lastIndex = items.length - 1;
+
+    return (
+      <BreadcrumbContext.Provider value={value}>
+        <nav
+          ref={ref}
+          aria-label="Breadcrumb"
+          className={["ds-breadcrumb", className].filter(Boolean).join(" ")}
+          {...props}
+        >
+          <ol
+            className={["ds-breadcrumb__list", `ds-breadcrumb__list--${size}`]
+              .filter(Boolean)
+              .join(" ")}
+          >
+            {items.map((child, index) => {
+              const isLast = index === lastIndex;
+              return (
+                <BreadcrumbItemContext.Provider
+                  key={(React.isValidElement(child) && child.key) || index}
+                  value={{ isLast }}
+                >
+                  <li className="ds-breadcrumb__item">{child}</li>
+                  {!isLast && (
+                    <li
+                      className="ds-breadcrumb__separator"
+                      aria-hidden="true"
+                    >
+                      {separator}
+                    </li>
+                  )}
+                </BreadcrumbItemContext.Provider>
+              );
+            })}
+          </ol>
+        </nav>
+      </BreadcrumbContext.Provider>
+    );
+  }
+);
+Breadcrumb.displayName = "Breadcrumb";
+
+interface BreadcrumbItemContextValue {
+  isLast: boolean;
+}
+
+const BreadcrumbItemContext = React.createContext<BreadcrumbItemContextValue>({
+  isLast: false,
+});
+
+export interface BreadcrumbItemProps
+  extends React.LiHTMLAttributes<HTMLLIElement> {
+  isCurrentPage?: boolean;
+  children?: React.ReactNode;
+}
+
+export const BreadcrumbItem = React.forwardRef<HTMLLIElement, BreadcrumbItemProps>(
+  ({ className = "", isCurrentPage, children, ...props }, ref) => {
+    const { isLast } = React.useContext(BreadcrumbItemContext);
+    const isCurrent = isCurrentPage ?? isLast;
+    return (
+      <li
+        ref={ref}
+        className={["ds-breadcrumb__item", className].filter(Boolean).join(" ")}
+        aria-current={isCurrent ? "page" : undefined}
+        {...props}
+      >
+        {children}
+      </li>
+    );
+  }
+);
+BreadcrumbItem.displayName = "BreadcrumbItem";
+
+export interface BreadcrumbLinkProps
+  extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href"> {
+  href?: string;
+  isCurrentPage?: boolean;
+  children?: React.ReactNode;
+}
+
+export const BreadcrumbLink = React.forwardRef<
+  HTMLAnchorElement,
+  BreadcrumbLinkProps
+>(({ className = "", isCurrentPage, href, children, ...props }, ref) => {
+  const { isLast } = React.useContext(BreadcrumbItemContext);
+  const isCurrent = isCurrentPage ?? isLast;
+
+  if (isCurrent) {
+    return (
+      <span
+        ref={ref as unknown as React.Ref<HTMLSpanElement>}
+        aria-current="page"
+        className={["ds-breadcrumb__current", className]
+          .filter(Boolean)
+          .join(" ")}
+      >
+        {children}
+      </span>
+    );
+  }
+
+  return (
+    <a
+      ref={ref}
+      href={href}
+      className={["ds-breadcrumb__link", className].filter(Boolean).join(" ")}
+      {...props}
+    >
+      {children}
+    </a>
+  );
+});
+BreadcrumbLink.displayName = "BreadcrumbLink";
+
+export interface BreadcrumbSeparatorProps
+  extends React.HTMLAttributes<HTMLSpanElement> {
+  children?: React.ReactNode;
+}
+
+export const BreadcrumbSeparator = React.forwardRef<
+  HTMLSpanElement,
+  BreadcrumbSeparatorProps
+>(({ className = "", children, ...props }, ref) => {
+  const { separator } = useBreadcrumbContext();
+  return (
+    <li
+      ref={ref as unknown as React.Ref<HTMLLIElement>}
+      className={["ds-breadcrumb__separator", className]
+        .filter(Boolean)
+        .join(" ")}
+      aria-hidden="true"
+      {...(props as React.LiHTMLAttributes<HTMLLIElement>)}
+    >
+      {children ?? separator}
+    </li>
+  );
+});
+BreadcrumbSeparator.displayName = "BreadcrumbSeparator";
