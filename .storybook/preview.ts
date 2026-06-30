@@ -1,9 +1,13 @@
 import type { Preview } from "@storybook/react";
 import React from "react";
 import "../src/styles/global.css";
+import theme from "./theme";
 
 const preview: Preview = {
   parameters: {
+    docs: {
+      theme,
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
