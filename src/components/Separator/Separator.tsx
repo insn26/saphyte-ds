@@ -1,8 +1,10 @@
 import React from "react";
 import "./Separator.css";
 
+/** Orientation of the separator. */
 export type SeparatorOrientation = "horizontal" | "vertical";
 
+/** Props for the Separator component. */
 export interface SeparatorProps extends React.HTMLAttributes<HTMLDivElement> {
   orientation?: SeparatorOrientation;
   label?: React.ReactNode;

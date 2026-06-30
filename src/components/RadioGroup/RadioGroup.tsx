@@ -1,9 +1,12 @@
 import React from "react";
 import "./RadioGroup.css";
 
+/** Orientation of the radio group. */
 export type RadioGroupOrientation = "horizontal" | "vertical";
+/** Size variant for the radio group. */
 export type RadioGroupSize = "sm" | "md" | "lg";
 
+/** An individual option in the radio group. */
 export interface RadioOption<T extends string = string> {
   value: T;
   label: React.ReactNode;
@@ -11,6 +14,7 @@ export interface RadioOption<T extends string = string> {
   description?: React.ReactNode;
 }
 
+/** Props for the RadioGroup component. */
 export interface RadioGroupProps<T extends string = string>
   extends Omit<
     React.HTMLAttributes<HTMLDivElement>,
@@ -127,6 +131,7 @@ export function RadioGroup<T extends string = string>({
 }
 RadioGroup.displayName = "RadioGroup";
 
+/** Props for an individual radio item within a RadioGroup. */
 export interface RadioGroupItemProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "type" | "value" | "size"> {
   value: string;

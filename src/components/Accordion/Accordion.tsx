@@ -1,7 +1,9 @@
 import React from "react";
 import "./Accordion.css";
 
+/** Visual variant of the accordion. */
 export type AccordionVariant = "default" | "bordered" | "flush";
+/** Size of the accordion. */
 export type AccordionSize = "sm" | "md" | "lg";
 
 interface AccordionContextValue {
@@ -14,6 +16,7 @@ interface AccordionContextValue {
   setDisabled: (index: number, disabled: boolean) => void;
 }
 
+/** Change handler type for the Accordion. Receives the expanded index or array of indices. */
 export type AccordionOnChangeHandler = (index: number | number[]) => void;
 
 const AccordionContext = React.createContext<AccordionContextValue | null>(null);
@@ -27,6 +30,7 @@ const useAccordionContext = (): AccordionContextValue => {
   return ctx;
 };
 
+/** Props for the Accordion component. Use with Accordion.Item, Accordion.Button, Accordion.Panel. */
 export interface AccordionProps
   extends Omit<React.HTMLAttributes<HTMLDivElement>, "onChange"> {
   defaultIndex?: number | number[];
@@ -129,6 +133,7 @@ export const Accordion = React.forwardRef<HTMLDivElement, AccordionProps>(
 );
 Accordion.displayName = "Accordion";
 
+/** Props for the AccordionItem subcomponent. Wraps a single accordion section. */
 export interface AccordionItemProps extends React.HTMLAttributes<HTMLDivElement> {
   isDisabled?: boolean;
   children?: React.ReactNode;
@@ -166,6 +171,7 @@ export const AccordionItem = React.forwardRef<HTMLDivElement, AccordionItemProps
 );
 AccordionItem.displayName = "AccordionItem";
 
+/** Props for the AccordionButton subcomponent. Toggles the visibility of the associated panel. */
 export interface AccordionButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode;
@@ -224,6 +230,7 @@ export const AccordionButton = React.forwardRef<HTMLButtonElement, AccordionButt
 );
 AccordionButton.displayName = "AccordionButton";
 
+/** Props for the AccordionPanel subcomponent. Contains the collapsible content for an accordion item. */
 export interface AccordionPanelProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }

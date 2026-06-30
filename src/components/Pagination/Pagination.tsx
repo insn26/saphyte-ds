@@ -1,8 +1,11 @@
 import React from "react";
 import "./Pagination.css";
 
+/** Size variant for the Pagination component. */
 export type PaginationSize = "xs" | "sm" | "md" | "lg";
+/** Visual variant for the Pagination component. */
 export type PaginationVariant = "outline" | "ghost" | "solid";
+/** Color palette for the Pagination component. */
 export type PaginationColorPalette = "gray" | "saphyte";
 
 const SIZE_DIMENSIONS: Record<PaginationSize, { size: number; fontSize: number }> = {
@@ -12,6 +15,7 @@ const SIZE_DIMENSIONS: Record<PaginationSize, { size: number; fontSize: number }
   lg: { size: 48, fontSize: 16 },
 };
 
+/** Props for the Pagination component. */
 export interface PaginationProps extends React.HTMLAttributes<HTMLElement> {
   count: number;
   page: number;

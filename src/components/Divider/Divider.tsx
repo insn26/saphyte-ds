@@ -1,9 +1,12 @@
 import React from "react";
 import "./Divider.css";
 
+/** Orientation of the Divider component. */
 export type DividerOrientation = "horizontal" | "vertical";
+/** Visual style variant of the Divider line. */
 export type DividerVariant = "solid" | "dashed" | "dotted";
 
+/** Props for the Divider component. Supports labels and custom styling. */
 export interface DividerProps extends React.HTMLAttributes<HTMLDivElement> {
   orientation?: DividerOrientation;
   variant?: DividerVariant;

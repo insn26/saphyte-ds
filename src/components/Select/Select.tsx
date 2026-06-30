@@ -1,15 +1,19 @@
 import React from "react";
 import "./Select.css";
 
+/** Size variant for the Select component. */
 export type SelectSize = "xs" | "sm" | "md" | "lg";
+/** Visual variant for the Select component. */
 export type SelectVariant = "outline" | "filled" | "flushed";
 
+/** An individual option in the select dropdown. */
 export interface SelectOption {
   label: string;
   value: string;
   disabled?: boolean;
 }
 
+/** Props for the Select component. */
 export interface SelectProps
   extends Omit<React.SelectHTMLAttributes<HTMLSelectElement>, "size"> {
   size?: SelectSize;

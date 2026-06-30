@@ -1,9 +1,12 @@
 import React from "react";
 import "./Input.css";
 
+/** Size variant for the Input component. */
 export type InputSize = "xs" | "sm" | "md" | "lg";
+/** Visual variant for the Input component. */
 export type InputVariant = "outline" | "filled" | "flushed";
 
+/** Props for the Input component. */
 export interface InputProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size"> {
   size?: InputSize;

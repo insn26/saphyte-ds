@@ -1,9 +1,12 @@
 import React from "react";
 import "./Skeleton.css";
 
+/** Size variant for the Skeleton component. */
 export type SkeletonSize = "sm" | "md" | "lg" | "full";
+/** Shape variant for the Skeleton component. */
 export type SkeletonShape = "text" | "circle" | "rect";
 
+/** Props for the Skeleton component. */
 export interface SkeletonProps extends React.HTMLAttributes<HTMLDivElement> {
   size?: SkeletonSize;
   shape?: SkeletonShape;

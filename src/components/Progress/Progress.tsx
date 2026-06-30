@@ -1,9 +1,12 @@
 import React from "react";
 import "./Progress.css";
 
+/** Size variant for the Progress component. */
 export type ProgressSize = "xs" | "sm" | "md" | "lg";
+/** Color theme for the Progress component. */
 export type ProgressColor = "saphyte" | "success" | "warning" | "error";
 
+/** Props for the Progress component. */
 export interface ProgressProps extends React.HTMLAttributes<HTMLDivElement> {
   size?: ProgressSize;
   color?: ProgressColor;

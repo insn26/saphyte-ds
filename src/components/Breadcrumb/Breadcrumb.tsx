@@ -1,9 +1,12 @@
 import React from "react";
 import "./Breadcrumb.css";
 
+/** Size variant of the breadcrumb. */
 export type BreadcrumbSize = "sm" | "md" | "lg";
+/** Allowed characters for the breadcrumb separator. */
 export type BreadcrumbSeparatorChar = "/" | ">" | "→" | "•" | "-";
 
+/** Props for the Breadcrumb component. Use with Breadcrumb.Item, Breadcrumb.Link, Breadcrumb.Separator. */
 export interface BreadcrumbProps extends React.HTMLAttributes<HTMLElement> {
   separator?: React.ReactNode;
   spacing?: string;
@@ -95,6 +98,7 @@ const BreadcrumbItemContext = React.createContext<BreadcrumbItemContextValue>({
   isLast: false,
 });
 
+/** Props for the BreadcrumbItem subcomponent. Represents a single breadcrumb item. */
 export interface BreadcrumbItemProps
   extends React.LiHTMLAttributes<HTMLLIElement> {
   isCurrentPage?: boolean;
@@ -119,6 +123,7 @@ export const BreadcrumbItem = React.forwardRef<HTMLLIElement, BreadcrumbItemProp
 );
 BreadcrumbItem.displayName = "BreadcrumbItem";
 
+/** Props for the BreadcrumbLink subcomponent. Renders a clickable breadcrumb link. */
 export interface BreadcrumbLinkProps
   extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href"> {
   href?: string;
@@ -160,6 +165,7 @@ export const BreadcrumbLink = React.forwardRef<
 });
 BreadcrumbLink.displayName = "BreadcrumbLink";
 
+/** Props for the BreadcrumbSeparator subcomponent. Renders a custom separator between breadcrumb items. */
 export interface BreadcrumbSeparatorProps
   extends React.HTMLAttributes<HTMLSpanElement> {
   children?: React.ReactNode;

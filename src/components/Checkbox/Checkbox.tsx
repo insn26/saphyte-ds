@@ -1,8 +1,10 @@
 import React from "react";
 import "./Checkbox.css";
 
+/** Size variant for the Checkbox component. */
 export type CheckboxSize = "sm" | "md" | "lg";
 
+/** Props for the Checkbox component. Supports indeterminate state and labels. */
 export interface CheckboxProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size" | "type"> {
   size?: CheckboxSize;

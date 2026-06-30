@@ -2,7 +2,9 @@ import React from "react";
 import { createPortal } from "react-dom";
 import "./Drawer.css";
 
+/** Placement of the Drawer panel on screen. */
 export type DrawerPlacement = "left" | "right" | "top" | "bottom";
+/** Size preset for the Drawer panel dimensions. */
 export type DrawerSize = "xs" | "sm" | "md" | "lg" | "xl" | "full";
 
 const SIZE_DIMENSIONS: Record<
@@ -36,6 +38,7 @@ const useDrawerContext = (): DrawerContextValue => {
 const FOCUSABLE_SELECTOR =
   'a[href],button:not([disabled]),textarea:not([disabled]),input:not([disabled]):not([type="hidden"]),select:not([disabled]),[tabindex]:not([tabindex="-1"])';
 
+/** Props for the root Drawer component. Manages open state, placement, and overlay behavior. */
 export interface DrawerProps extends React.HTMLAttributes<HTMLDivElement> {
   isOpen: boolean;
   onClose: () => void;
@@ -154,6 +157,7 @@ export const Drawer: React.FC<DrawerProps> = ({
 };
 Drawer.displayName = "Drawer";
 
+/** Props for the Drawer overlay backdrop. */
 export interface DrawerOverlayProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
@@ -161,6 +165,7 @@ export interface DrawerOverlayProps extends React.HTMLAttributes<HTMLDivElement>
 export const DrawerOverlay: React.FC<DrawerOverlayProps> = () => null;
 DrawerOverlay.displayName = "DrawerOverlay";
 
+/** Props for the Drawer content panel. */
 export interface DrawerContentProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
@@ -204,6 +209,7 @@ export const DrawerContent = React.forwardRef<HTMLDivElement, DrawerContentProps
 );
 DrawerContent.displayName = "DrawerContent";
 
+/** Props for the Drawer header section. */
 export interface DrawerHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
@@ -221,6 +227,7 @@ export const DrawerHeader = React.forwardRef<HTMLDivElement, DrawerHeaderProps>(
 );
 DrawerHeader.displayName = "DrawerHeader";
 
+/** Props for the Drawer body content area. */
 export interface DrawerBodyProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
@@ -238,6 +245,7 @@ export const DrawerBody = React.forwardRef<HTMLDivElement, DrawerBodyProps>(
 );
 DrawerBody.displayName = "DrawerBody";
 
+/** Props for the Drawer footer section. */
 export interface DrawerFooterProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
@@ -255,6 +263,7 @@ export const DrawerFooter = React.forwardRef<HTMLDivElement, DrawerFooterProps>(
 );
 DrawerFooter.displayName = "DrawerFooter";
 
+/** Props for the Drawer close button. */
 export interface DrawerCloseButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode;

@@ -1,7 +1,9 @@
 {
   "name": "@sapyhte/design-system",
   "version": "0.1.0",
-  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
   "type": "module",
   "main": "dist/saphyte-ds.cjs",
   "module": "dist/saphyte-ds.mjs",
@@ -27,6 +29,10 @@
     "deploy:storybook": "npm run build:storybook:ghpages && gh-pages -d storybook-static-ghpages --nojekyll",
     "deploy:chromatic": "npx chromatic --project-token=chpt_0f9d995d7a8b092 --build-script-name=build:storybook",
     "storybook": "storybook dev -p 6006",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:storybook": "npx test-storybook",
     "typecheck": "tsc -b --noEmit"
   },
   "dependencies": {
@@ -39,15 +45,21 @@
     "@storybook/addon-themes": "^8.4.7",
     "@storybook/react": "^8.4.7",
     "@storybook/react-vite": "^8.4.7",
+    "@storybook/test-runner": "^0.19.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.7.0",
     "chromatic": "^17.5.0",
     "gh-pages": "^6.3.0",
+    "jsdom": "^29.1.1",
     "storybook": "^8.4.7",
     "style-dictionary": "^4.2.0",
     "typescript": "~5.6.2",
     "vite": "^6.0.0",
-    "vite-plugin-dts": "^4.5.3"
+    "vite-plugin-dts": "^4.5.3",
+    "vitest": "^4.1.9"
   }
 }

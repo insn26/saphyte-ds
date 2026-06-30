@@ -1,9 +1,12 @@
 import React from "react";
 import "./Table.css";
 
+/** Size variant for the Table component. */
 export type TableSize = "sm" | "md" | "lg";
+/** Visual variant for the Table component. */
 export type TableVariant = "simple" | "striped" | "bordered";
 
+/** Props for the Table component. */
 export interface TableProps extends React.TableHTMLAttributes<HTMLTableElement> {
   size?: TableSize;
   variant?: TableVariant;
@@ -70,6 +73,7 @@ export const Table = React.forwardRef<HTMLTableElement, TableProps>(
 );
 Table.displayName = "Table";
 
+/** Wrapper component for the table head. */
 export interface TheadProps extends React.HTMLAttributes<HTMLTableSectionElement> {
   children?: React.ReactNode;
 }
@@ -87,6 +91,7 @@ export const Thead = React.forwardRef<HTMLTableSectionElement, TheadProps>(
 );
 Thead.displayName = "Thead";
 
+/** Wrapper component for the table body. */
 export interface TbodyProps extends React.HTMLAttributes<HTMLTableSectionElement> {
   children?: React.ReactNode;
 }
@@ -104,6 +109,7 @@ export const Tbody = React.forwardRef<HTMLTableSectionElement, TbodyProps>(
 );
 Tbody.displayName = "Tbody";
 
+/** Props for the table row component. */
 export interface TrProps extends React.HTMLAttributes<HTMLTableRowElement> {
   children?: React.ReactNode;
   isSelected?: boolean;
@@ -128,6 +134,7 @@ export const Tr = React.forwardRef<HTMLTableRowElement, TrProps>(
 );
 Tr.displayName = "Tr";
 
+/** Props for the table header cell component. */
 export interface ThProps extends React.ThHTMLAttributes<HTMLTableCellElement> {
   isNumeric?: boolean;
   children?: React.ReactNode;
@@ -157,6 +164,7 @@ export const Th = React.forwardRef<HTMLTableCellElement, ThProps>(
 );
 Th.displayName = "Th";
 
+/** Props for the table data cell component. */
 export interface TdProps extends React.TdHTMLAttributes<HTMLTableCellElement> {
   isNumeric?: boolean;
   children?: React.ReactNode;
@@ -181,6 +189,7 @@ export const Td = React.forwardRef<HTMLTableCellElement, TdProps>(
 );
 Td.displayName = "Td";
 
+/** Props for the table caption component. */
 export interface TableCaptionProps extends React.HTMLAttributes<HTMLTableCaptionElement> {
   placement?: "top" | "bottom";
   children?: React.ReactNode;

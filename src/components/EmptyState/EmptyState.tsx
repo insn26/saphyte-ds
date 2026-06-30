@@ -1,8 +1,10 @@
 import React from "react";
 import "./EmptyState.css";
 
+/** Size variant for the EmptyState component. */
 export type EmptyStateSize = "sm" | "md" | "lg";
 
+/** Props for the root EmptyState component. */
 export interface EmptyStateProps extends React.HTMLAttributes<HTMLDivElement> {
   size?: EmptyStateSize;
   children?: React.ReactNode;
@@ -27,6 +29,7 @@ export const EmptyState = React.forwardRef<HTMLDivElement, EmptyStateProps>(
 );
 EmptyState.displayName = "EmptyState";
 
+/** Props for the EmptyState icon wrapper. */
 export interface EmptyStateIconProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
   size?: number;
@@ -46,6 +49,7 @@ export const EmptyStateIcon = React.forwardRef<HTMLDivElement, EmptyStateIconPro
 );
 EmptyStateIcon.displayName = "EmptyStateIcon";
 
+/** Props for the EmptyState title heading. */
 export interface EmptyStateTitleProps extends React.HTMLAttributes<HTMLHeadingElement> {
   children?: React.ReactNode;
 }
@@ -64,6 +68,7 @@ export const EmptyStateTitle = React.forwardRef<
 ));
 EmptyStateTitle.displayName = "EmptyStateTitle";
 
+/** Props for the EmptyState description text. */
 export interface EmptyStateDescriptionProps
   extends React.HTMLAttributes<HTMLParagraphElement> {
   children?: React.ReactNode;
@@ -85,6 +90,7 @@ export const EmptyStateDescription = React.forwardRef<
 ));
 EmptyStateDescription.displayName = "EmptyStateDescription";
 
+/** Props for the EmptyState action area. */
 export interface EmptyStateActionProps
   extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;

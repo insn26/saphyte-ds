@@ -1,6 +1,7 @@
 import React from "react";
 import { icons, iconNames } from "./icons";
 
+/** Props for the Icon component. Renders SVG icons by name. */
 export interface IconProps extends React.SVGAttributes<SVGElement> {
   name: string;
   size?: number | string;

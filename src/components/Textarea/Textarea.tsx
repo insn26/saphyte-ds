@@ -1,8 +1,10 @@
 import React from "react";
 import "./Textarea.css";
 
+/** Visual variant for the Textarea component. */
 export type TextareaVariant = "outline" | "filled" | "flushed";
 
+/** Props for the Textarea component. */
 export interface TextareaProps
   extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   variant?: TextareaVariant;

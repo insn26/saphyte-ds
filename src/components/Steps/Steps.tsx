@@ -1,9 +1,13 @@
 import React from "react";
 import "./Steps.css";
 
+/** Orientation of the steps. */
 export type StepsOrientation = "horizontal" | "vertical";
+/** Status of a step. */
 export type StepsStatus = "active" | "complete" | "incomplete";
+/** Size variant for the Steps component. */
 export type StepsSize = "sm" | "md" | "lg";
+/** Color palette for the Steps component. */
 export type StepsColorPalette = "gray" | "saphyte";
 
 interface StepsContextValue {
@@ -24,6 +28,7 @@ const useStepsContext = (): StepsContextValue => {
   return ctx;
 };
 
+/** Props for the Steps component. */
 export interface StepsProps
   extends Omit<React.HTMLAttributes<HTMLOListElement>, "children"> {
   activeStep: number;
@@ -97,6 +102,7 @@ export const Steps = React.forwardRef<HTMLOListElement, StepsProps>(
 );
 Steps.displayName = "Steps";
 
+/** Props for an individual Step component. */
 export interface StepProps
   extends Omit<React.LiHTMLAttributes<HTMLLIElement>, "title"> {
   index?: number;
@@ -165,6 +171,7 @@ export const Step = React.forwardRef<HTMLLIElement, StepProps>(
 );
 Step.displayName = "Step";
 
+/** Props for the StepIcon component. */
 export interface StepIconProps extends React.HTMLAttributes<HTMLDivElement> {
   status?: StepsStatus;
   index?: number;
@@ -216,6 +223,7 @@ export const StepIcon = React.forwardRef<HTMLDivElement, StepIconProps>(
 );
 StepIcon.displayName = "StepIcon";
 
+/** Wrapper component for the step title. */
 export interface StepTitleProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
@@ -233,6 +241,7 @@ export const StepTitle = React.forwardRef<HTMLDivElement, StepTitleProps>(
 );
 StepTitle.displayName = "StepTitle";
 
+/** Wrapper component for the step description. */
 export interface StepDescriptionProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }

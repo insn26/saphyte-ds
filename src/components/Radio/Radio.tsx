@@ -1,8 +1,10 @@
 import React from "react";
 import "./Radio.css";
 
+/** Size variant for the Radio component. */
 export type RadioSize = "sm" | "md" | "lg";
 
+/** Props for the Radio component. */
 export interface RadioProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size" | "type"> {
   size?: RadioSize;

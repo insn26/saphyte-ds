@@ -1,9 +1,12 @@
 import React from "react";
 import "./Alert.css";
 
+/** Status variant of the alert. Determines the color and icon. */
 export type AlertStatus = "info" | "success" | "warning" | "error";
+/** Visual style variant of the alert. */
 export type AlertVariant = "subtle" | "solid" | "outline" | "left-accent";
 
+/** Props for the Alert component. Displays a contextual notification message. */
 export interface AlertProps extends Omit<React.HTMLAttributes<HTMLDivElement>, "title"> {
   status?: AlertStatus;
   variant?: AlertVariant;

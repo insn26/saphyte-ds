@@ -1,7 +1,9 @@
 import React from "react";
 import "./Slider.css";
 
+/** Size variant for the Slider component. */
 export type SliderSize = "sm" | "md" | "lg";
+/** Color palette for the Slider component. */
 export type SliderColorPalette = "gray" | "saphyte";
 
 const SIZE_DIMENSIONS: Record<SliderSize, { track: number; thumb: number }> = {
@@ -10,11 +12,13 @@ const SIZE_DIMENSIONS: Record<SliderSize, { track: number; thumb: number }> = {
   lg: { track: 8, thumb: 22 },
 };
 
+/** A mark to display along the slider track. */
 export interface SliderMark {
   value: number;
   label?: React.ReactNode;
 }
 
+/** Props for the Slider component. */
 export interface SliderProps
   extends Omit<
     React.InputHTMLAttributes<HTMLInputElement>,

@@ -2,7 +2,9 @@ import React from "react";
 import { createPortal } from "react-dom";
 import "./Modal.css";
 
+/** Size variant for the Modal component. */
 export type ModalSize = "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "full";
+/** Visual variant for the Modal component. */
 export type ModalVariant = "default" | "fullscreen";
 
 const SIZE_WIDTHS: Record<ModalSize, string> = {
@@ -33,6 +35,7 @@ const useModalContext = (): ModalContextValue => {
 const FOCUSABLE_SELECTOR =
   'a[href],button:not([disabled]),textarea:not([disabled]),input:not([disabled]):not([type="hidden"]),select:not([disabled]),[tabindex]:not([tabindex="-1"])';
 
+/** Props for the Modal component. */
 export interface ModalProps extends React.HTMLAttributes<HTMLDivElement> {
   isOpen: boolean;
   onClose: () => void;
@@ -191,6 +194,7 @@ export const Modal: React.FC<ModalProps> = ({
 };
 Modal.displayName = "Modal";
 
+/** Props for the ModalOverlay component. */
 export interface ModalOverlayProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
@@ -198,6 +202,7 @@ export interface ModalOverlayProps extends React.HTMLAttributes<HTMLDivElement> 
 export const ModalOverlay: React.FC<ModalOverlayProps> = () => null;
 ModalOverlay.displayName = "ModalOverlay";
 
+/** Props for the ModalContent component. */
 export interface ModalContentProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
@@ -223,6 +228,7 @@ export const ModalContent = React.forwardRef<HTMLDivElement, ModalContentProps>(
 );
 ModalContent.displayName = "ModalContent";
 
+/** Props for the ModalHeader component. */
 export interface ModalHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
@@ -240,6 +246,7 @@ export const ModalHeader = React.forwardRef<HTMLDivElement, ModalHeaderProps>(
 );
 ModalHeader.displayName = "ModalHeader";
 
+/** Props for the ModalBody component. */
 export interface ModalBodyProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
@@ -257,6 +264,7 @@ export const ModalBody = React.forwardRef<HTMLDivElement, ModalBodyProps>(
 );
 ModalBody.displayName = "ModalBody";
 
+/** Props for the ModalFooter component. */
 export interface ModalFooterProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
@@ -274,6 +282,7 @@ export const ModalFooter = React.forwardRef<HTMLDivElement, ModalFooterProps>(
 );
 ModalFooter.displayName = "ModalFooter";
 
+/** Props for the ModalCloseButton component. */
 export interface ModalCloseButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode;

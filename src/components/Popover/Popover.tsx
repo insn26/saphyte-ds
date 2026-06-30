@@ -1,7 +1,9 @@
 import React from "react";
 import "./Popover.css";
 
+/** Position for the Popover component. */
 export type PopoverPosition = "top" | "right" | "bottom" | "left";
+/** Visual variant for the Popover component. */
 export type PopoverVariant = "default" | "subtle";
 
 interface PopoverContextValue {
@@ -27,6 +29,7 @@ const usePopoverContext = (): PopoverContextValue => {
   return ctx;
 };
 
+/** Props for the Popover component. */
 export interface PopoverProps extends React.HTMLAttributes<HTMLDivElement> {
   isOpen?: boolean;
   defaultOpen?: boolean;
@@ -102,6 +105,7 @@ export const Popover = React.forwardRef<HTMLDivElement, PopoverProps>(
 );
 Popover.displayName = "Popover";
 
+/** Props for the PopoverTrigger component. */
 export interface PopoverTriggerProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   asChild?: boolean;
@@ -169,6 +173,7 @@ export const PopoverTrigger = React.forwardRef<HTMLButtonElement, PopoverTrigger
 );
 PopoverTrigger.displayName = "PopoverTrigger";
 
+/** Props for the PopoverContent component. */
 export interface PopoverContentProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
   withArrow?: boolean;
@@ -240,6 +245,7 @@ export const PopoverContent = React.forwardRef<HTMLDivElement, PopoverContentPro
 );
 PopoverContent.displayName = "PopoverContent";
 
+/** Props for the PopoverArrow component. */
 export interface PopoverArrowProps extends React.HTMLAttributes<HTMLSpanElement> {
   size?: number;
 }
@@ -262,6 +268,7 @@ export const PopoverArrow = React.forwardRef<HTMLSpanElement, PopoverArrowProps>
 );
 PopoverArrow.displayName = "PopoverArrow";
 
+/** Props for the PopoverHeader component. */
 export interface PopoverHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
@@ -279,6 +286,7 @@ export const PopoverHeader = React.forwardRef<HTMLDivElement, PopoverHeaderProps
 );
 PopoverHeader.displayName = "PopoverHeader";
 
+/** Props for the PopoverBody component. */
 export interface PopoverBodyProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
@@ -296,6 +304,7 @@ export const PopoverBody = React.forwardRef<HTMLDivElement, PopoverBodyProps>(
 );
 PopoverBody.displayName = "PopoverBody";
 
+/** Props for the PopoverFooter component. */
 export interface PopoverFooterProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }

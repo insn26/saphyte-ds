@@ -1,8 +1,10 @@
 import React from "react";
 import "./Spinner.css";
 
+/** Size variant for the Spinner component. */
 export type SpinnerSize = "xs" | "sm" | "md" | "lg" | "xl";
 
+/** Props for the Spinner component. */
 export interface SpinnerProps extends React.HTMLAttributes<HTMLSpanElement> {
   size?: SpinnerSize;
   label?: React.ReactNode;

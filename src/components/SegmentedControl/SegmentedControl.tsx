@@ -1,7 +1,9 @@
 import React from "react";
 import "./SegmentedControl.css";
 
+/** Size variant for the SegmentedControl component. */
 export type SegmentedControlSize = "sm" | "md" | "lg";
+/** Color palette for the SegmentedControl component. */
 export type SegmentedControlColorPalette = "gray" | "saphyte";
 
 const SIZE_DIMENSIONS: Record<SegmentedControlSize, { size: number; fontSize: number }> = {
@@ -10,6 +12,7 @@ const SIZE_DIMENSIONS: Record<SegmentedControlSize, { size: number; fontSize: nu
   lg: { size: 44, fontSize: 16 },
 };
 
+/** An individual option in the segmented control. */
 export interface SegmentedControlOption<T extends string = string> {
   value: T;
   label: React.ReactNode;
@@ -17,6 +20,7 @@ export interface SegmentedControlOption<T extends string = string> {
   isDisabled?: boolean;
 }
 
+/** Props for the SegmentedControl component. */
 export interface SegmentedControlProps<T extends string = string>
   extends Omit<React.HTMLAttributes<HTMLDivElement>, "defaultValue" | "onChange" | "value"> {
   options: SegmentedControlOption<T>[];

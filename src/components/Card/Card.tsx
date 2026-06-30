@@ -1,9 +1,12 @@
 import React from "react";
 import "./Card.css";
 
+/** Visual variant of the card. */
 export type CardVariant = "elevated" | "outline" | "subtle" | "solid";
+/** Size variant of the card. */
 export type CardSize = "sm" | "md" | "lg";
 
+/** Props for the Card component. Use with Card.Header, Card.Body, Card.Footer. */
 export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   variant?: CardVariant;
   size?: CardSize;
@@ -43,6 +46,7 @@ export const Card = React.forwardRef<HTMLDivElement, CardProps>(
 
 Card.displayName = "Card";
 
+/** Props for the CardHeader subcomponent. Renders the card header area. */
 export interface CardHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
@@ -56,6 +60,7 @@ export const CardHeader = React.forwardRef<HTMLDivElement, CardHeaderProps>(
 );
 CardHeader.displayName = "CardHeader";
 
+/** Props for the CardBody subcomponent. Renders the card body content area. */
 export interface CardBodyProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
@@ -69,6 +74,7 @@ export const CardBody = React.forwardRef<HTMLDivElement, CardBodyProps>(
 );
 CardBody.displayName = "CardBody";
 
+/** Props for the CardFooter subcomponent. Renders the card footer area. */
 export interface CardFooterProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }

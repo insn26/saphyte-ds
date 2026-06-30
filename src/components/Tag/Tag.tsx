@@ -1,8 +1,11 @@
 import React from "react";
 import "./Tag.css";
 
+/** Size variant for the Tag component. */
 export type TagSize = "sm" | "md" | "lg";
+/** Visual variant for the Tag component. */
 export type TagVariant = "solid" | "subtle" | "outline";
+/** Color palette for the Tag component. */
 export type TagColorPalette =
   | "gray"
   | "danger"
@@ -29,6 +32,7 @@ const useTagContext = (): TagContextValue => {
   return ctx;
 };
 
+/** Props for the Tag component. */
 export interface TagProps extends React.HTMLAttributes<HTMLSpanElement> {
   size?: TagSize;
   variant?: TagVariant;
@@ -84,6 +88,7 @@ export const Tag = React.forwardRef<HTMLSpanElement, TagProps>(
 );
 Tag.displayName = "Tag";
 
+/** Wrapper component for the tag label. */
 export interface TagLabelProps extends React.HTMLAttributes<HTMLSpanElement> {
   children?: React.ReactNode;
 }
@@ -106,6 +111,7 @@ export const TagLabel = React.forwardRef<HTMLSpanElement, TagLabelProps>(
 );
 TagLabel.displayName = "TagLabel";
 
+/** Props for the tag close button. */
 export interface TagCloseButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode;
@@ -154,6 +160,7 @@ export const TagCloseButton = React.forwardRef<
 });
 TagCloseButton.displayName = "TagCloseButton";
 
+/** Wrapper component for the tag left icon. */
 export interface TagLeftIconProps extends React.HTMLAttributes<HTMLSpanElement> {
   children?: React.ReactNode;
 }

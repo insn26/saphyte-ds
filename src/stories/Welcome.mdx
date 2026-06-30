@@ -1,0 +1,61 @@
+import { Meta, Title, Subtitle, Description, Primary, Controls, Story, Canvas } from "@storybook/blocks";
+import * as ButtonStories from "./Button.stories";
+import * as BadgeStories from "./Badge.stories";
+import * as StackStories from "./Stack.stories";
+
+<Meta title="Welcome" />
+
+<Title>@sapyhte/design-system</Title>
+
+<Subtitle>A React component library built with TypeScript and design tokens</Subtitle>
+
+## Installation
+
+```bash
+npm install @sapyhte/design-system
+```
+
+**Peer dependencies:** `react` ^18.3.1, `react-dom` ^18.3.1
+
+## Quick Start
+
+```tsx
+import { Button, Badge, Stack } from "@sapyhte/design-system";
+import "@sapyhte/design-system/styles/index.css";
+
+function App() {
+  return (
+    <Stack spacing={4}>
+      <Badge colorPalette="saphyte">New</Badge>
+      <Button variant="solid" colorPalette="saphyte">
+        Get Started
+      </Button>
+    </Stack>
+  );
+}
+```
+
+## Component Categories
+
+- **Layout** — Stack, Card, Divider, Separator, Tabs, Accordion, Table, Stat, Steps
+- **Forms & Inputs** — Button, IconButton, Input, Textarea, Select, Checkbox, Radio, RadioGroup, Switch, Slider, SegmentedControl
+- **Overlays** — Modal, Drawer, Popover, Tooltip
+- **Navigation** — Breadcrumb, Menu, Pagination
+- **Feedback** — Alert, Progress, EmptyState, Spinner, Skeleton
+- **Data Display** — Badge, Tag, Avatar, Kbd, Icon
+
+## Examples
+
+Here's a quick example combining components:
+
+<Canvas>
+  <Story of={ButtonStories.Solid} />
+</Canvas>
+
+<Canvas>
+  <Story of={BadgeStories.Default} />
+</Canvas>
+
+<Canvas>
+  <Story of={StackStories.HStackDefault} />
+</Canvas>

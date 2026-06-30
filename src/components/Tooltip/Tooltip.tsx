@@ -1,9 +1,12 @@
 import React from "react";
 import "./Tooltip.css";
 
+/** Position of the tooltip relative to the trigger element. */
 export type TooltipPosition = "top" | "right" | "bottom" | "left";
+/** Visual variant for the Tooltip component. */
 export type TooltipVariant = "solid" | "subtle";
 
+/** Props for the Tooltip component. */
 export interface TooltipProps extends Omit<React.HTMLAttributes<HTMLDivElement>, "content"> {
   label: React.ReactNode;
   position?: TooltipPosition;

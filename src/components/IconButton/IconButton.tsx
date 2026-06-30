@@ -1,8 +1,11 @@
 import React from "react";
 import "./IconButton.css";
 
+/** Size variant for the IconButton component. */
 export type IconButtonSize = "2xs" | "xs" | "sm" | "md" | "lg";
+/** Visual style variant for the IconButton. */
 export type IconButtonVariant = "solid" | "subtle" | "surface" | "outline" | "ghost";
+/** Color palette theme for the IconButton. */
 export type IconButtonColorPalette =
   | "gray"
   | "danger"
@@ -16,6 +19,7 @@ export type IconButtonColorPalette =
   | "yellow"
   | "warning";
 
+/** Props for the IconButton component. Requires an accessible aria-label. */
 export interface IconButtonProps
   extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "type"> {
   size?: IconButtonSize;

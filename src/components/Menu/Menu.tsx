@@ -1,6 +1,7 @@
 import React from "react";
 import "./Menu.css";
 
+/** Size variant for the Menu component. */
 export type MenuSize = "sm" | "md" | "lg";
 
 interface MenuContextValue {
@@ -25,6 +26,7 @@ const useMenuContext = (): MenuContextValue => {
   return ctx;
 };
 
+/** Props for the Menu component. */
 export interface MenuProps extends React.HTMLAttributes<HTMLDivElement> {
   isOpen?: boolean;
   defaultIsOpen?: boolean;
@@ -97,6 +99,7 @@ export const Menu = React.forwardRef<HTMLDivElement, MenuProps>(
 );
 Menu.displayName = "Menu";
 
+/** Props for the MenuButton component. */
 export interface MenuButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   asChild?: boolean;
@@ -164,6 +167,7 @@ export const MenuButton = React.forwardRef<HTMLButtonElement, MenuButtonProps>(
 );
 MenuButton.displayName = "MenuButton";
 
+/** Props for the MenuList component. */
 export interface MenuListProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
   placement?: "bottom-start" | "bottom-end" | "top-start" | "top-end";
@@ -237,6 +241,7 @@ export const MenuList = React.forwardRef<HTMLDivElement, MenuListProps>(
 );
 MenuList.displayName = "MenuList";
 
+/** Props for the MenuItem component. */
 export interface MenuItemProps
   extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "value"> {
   isDisabled?: boolean;
@@ -299,6 +304,7 @@ export const MenuItem = React.forwardRef<HTMLButtonElement, MenuItemProps>(
 );
 MenuItem.displayName = "MenuItem";
 
+/** Props for the MenuDivider component. */
 export interface MenuDividerProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
@@ -318,6 +324,7 @@ export const MenuDivider = React.forwardRef<HTMLDivElement, MenuDividerProps>(
 );
 MenuDivider.displayName = "MenuDivider";
 
+/** Props for the MenuGroup component. */
 export interface MenuGroupProps
   extends Omit<React.HTMLAttributes<HTMLDivElement>, "title"> {
   title?: React.ReactNode;

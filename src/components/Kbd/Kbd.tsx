@@ -1,6 +1,7 @@
 import React from "react";
 import "./Kbd.css";
 
+/** Props for the Kbd component. */
 export interface KbdProps extends React.HTMLAttributes<HTMLElement> {
   variant?: "default" | "subtle" | "solid";
   size?: "xs" | "sm" | "md";
@@ -30,6 +31,7 @@ export const Kbd = React.forwardRef<HTMLElement, KbdProps>(
 );
 Kbd.displayName = "Kbd";
 
+/** Props for the KbdGroup component. */
 export interface KbdGroupProps extends React.HTMLAttributes<HTMLSpanElement> {
   children?: React.ReactNode;
 }

@@ -1,9 +1,12 @@
 import React from "react";
 import "./Avatar.css";
 
+/** Size variant of the avatar. */
 export type AvatarSize = "2xs" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl";
+/** Visual variant of the avatar — solid color initials or image. */
 export type AvatarVariant = "solid" | "image";
 
+/** Props for the Avatar component. Displays a user avatar image or initials. */
 export interface AvatarProps extends React.HTMLAttributes<HTMLSpanElement> {
   size?: AvatarSize;
   variant?: AvatarVariant;

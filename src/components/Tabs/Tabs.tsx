@@ -1,7 +1,9 @@
 import React from "react";
 import "./Tabs.css";
 
+/** Visual variant for the Tabs component. */
 export type TabsVariant = "line" | "enclosed" | "soft-rounded";
+/** Size variant for the Tabs component. */
 export type TabsSize = "sm" | "md" | "lg";
 
 export interface TabsContextValue {
@@ -26,6 +28,7 @@ export const useTabsContext = (): TabsContextValue => {
 
 export const useTabIndex = (): number => React.useContext(TabIndexContext);
 
+/** Props for the Tabs component. */
 export interface TabsProps
   extends Omit<React.HTMLAttributes<HTMLDivElement>, "onChange"> {
   defaultIndex?: number;
@@ -84,6 +87,7 @@ export const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
 );
 Tabs.displayName = "Tabs";
 
+/** Wrapper component for the tab list. */
 export interface TabListProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
@@ -119,6 +123,7 @@ export const TabList = React.forwardRef<HTMLDivElement, TabListProps>(
 );
 TabList.displayName = "TabList";
 
+/** Props for an individual Tab component. */
 export interface TabProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   isDisabled?: boolean;
   children?: React.ReactNode;
@@ -166,6 +171,7 @@ export const Tab = React.forwardRef<HTMLButtonElement, TabProps>(
 );
 Tab.displayName = "Tab";
 
+/** Wrapper component for the tab panels. */
 export interface TabPanelsProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
@@ -219,6 +225,7 @@ export const TabPanels = React.forwardRef<HTMLDivElement, TabPanelsProps>(
 );
 TabPanels.displayName = "TabPanels";
 
+/** Wrapper component for an individual tab panel. */
 export interface TabPanelProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }

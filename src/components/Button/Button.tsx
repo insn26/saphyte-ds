@@ -1,8 +1,11 @@
 import React from "react";
 import "./Button.css";
 
+/** Size variant of the button. */
 export type ButtonSize = "2xs" | "xs" | "sm" | "md" | "lg";
+/** Visual style variant of the button. */
 export type ButtonVariant = "solid" | "subtle" | "surface" | "outline" | "ghost" | "plain";
+/** Color palette options for the button. */
 export type ButtonColorPalette =
   | "gray"
   | "danger"
@@ -16,6 +19,7 @@ export type ButtonColorPalette =
   | "yellow"
   | "warning";
 
+/** Props for the Button component. Supports multiple variants, sizes, color palettes, and loading state. */
 export interface ButtonProps
   extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "type"> {
   size?: ButtonSize;

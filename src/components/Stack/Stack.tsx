@@ -1,13 +1,16 @@
 import React from "react";
 import "./Stack.css";
 
+/** Direction for the Stack layout. */
 export type StackDirection = "row" | "column" | "row-reverse" | "column-reverse";
+/** Alignment for items in the Stack layout. */
 export type StackAlign =
   | "start"
   | "center"
   | "end"
   | "stretch"
   | "baseline";
+/** Justification for items in the Stack layout. */
 export type StackJustify =
   | "start"
   | "center"
@@ -15,8 +18,10 @@ export type StackJustify =
   | "space-between"
   | "space-around"
   | "space-evenly";
+/** Wrap behavior for the Stack layout. */
 export type StackWrap = "nowrap" | "wrap" | "wrap-reverse";
 
+/** Props for the Stack component. */
 export interface StackProps extends React.HTMLAttributes<HTMLDivElement> {
   direction?: StackDirection;
   spacing?: string | number;
@@ -79,6 +84,7 @@ export const Stack = React.forwardRef<HTMLDivElement, StackProps>(
 );
 Stack.displayName = "Stack";
 
+/** Props for the VStack (vertical stack) component. */
 export interface VStackProps extends Omit<StackProps, "direction"> {
   spacing?: string | number;
   children?: React.ReactNode;
@@ -98,6 +104,7 @@ export const VStack = React.forwardRef<HTMLDivElement, VStackProps>(
 );
 VStack.displayName = "VStack";
 
+/** Props for the HStack (horizontal stack) component. */
 export interface HStackProps extends Omit<StackProps, "direction"> {
   spacing?: string | number;
   children?: React.ReactNode;

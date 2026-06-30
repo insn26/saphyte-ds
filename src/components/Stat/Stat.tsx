@@ -1,8 +1,10 @@
 import React from "react";
 import "./Stat.css";
 
+/** Trend direction for the Stat component. */
 export type StatTrend = "up" | "down" | "flat";
 
+/** Wrapper component for displaying a statistic. */
 export interface StatProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
@@ -21,6 +23,7 @@ export const Stat = React.forwardRef<HTMLDivElement, StatProps>(
 );
 Stat.displayName = "Stat";
 
+/** Wrapper component for the statistic label. */
 export interface StatLabelProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
@@ -38,6 +41,7 @@ export const StatLabel = React.forwardRef<HTMLDivElement, StatLabelProps>(
 );
 StatLabel.displayName = "StatLabel";
 
+/** Wrapper component for the statistic number value. */
 export interface StatNumberProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
@@ -55,6 +59,7 @@ export const StatNumber = React.forwardRef<HTMLDivElement, StatNumberProps>(
 );
 StatNumber.displayName = "StatNumber";
 
+/** Wrapper component for the statistic help text. */
 export interface StatHelpTextProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
@@ -72,6 +77,7 @@ export const StatHelpText = React.forwardRef<HTMLDivElement, StatHelpTextProps>(
 );
 StatHelpText.displayName = "StatHelpText";
 
+/** Props for the StatArrow component indicating a trend direction. */
 export interface StatArrowProps extends React.SVGAttributes<SVGSVGElement> {
   type?: StatTrend;
 }
@@ -148,6 +154,7 @@ export const StatArrow = React.forwardRef<SVGSVGElement, StatArrowProps>(
 );
 StatArrow.displayName = "StatArrow";
 
+/** Wrapper component for grouping multiple Stat components. */
 export interface StatGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
