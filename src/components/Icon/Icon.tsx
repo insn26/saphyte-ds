@@ -12,21 +12,18 @@ export const Icon: React.FC<IconProps> = ({
   size = 16,
   className = "",
   style,
-  ...props
 }) => {
   const svgContent = icons[name];
 
   if (!svgContent) {
-    if (typeof window !== "undefined" && process.env.NODE_ENV !== "production") {
+    if (import.meta.env.DEV) {
       console.warn(`Icon "${name}" not found`);
     }
     return null;
   }
 
-  // Replace size attributes and use currentColor
   const modifiedSvg = svgContent
-    .replace(/<svg([^>]*)>/, (match, attrs) => {
-      // Remove existing width/height attributes
+    .replace(/<svg([^>]*)>/, (_match, attrs) => {
       const cleanedAttrs = attrs
         .replace(/\s*width="[^"]*"/g, "")
         .replace(/\s*height="[^"]*"/g, "")

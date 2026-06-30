@@ -15,12 +15,12 @@
 
 /* ==== Variants ==== */
 .ds-avatar--solid {
-  background: #5d42e6;
-  color: #ffffff;
+  background: var(--ds-color-primary);
+  color: var(--fg-inverted);
 }
 
 .ds-avatar--image {
-  background: #f4f4f5;
+  background: var(--bg-muted);
 }
 
 .ds-avatar__img {

@@ -7,7 +7,7 @@
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 14px;
   line-height: 20px;
-  color: #18181b;
+  color: var(--fg-default);
   user-select: none;
 }
 
@@ -45,8 +45,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #ffffff;
-  border: 2px solid #d4d4d8;
+  background: var(--bg-default);
+  border: 2px solid var(--border-emphasized);
   border-radius: 50%;
   transition: border-color 0.15s, box-shadow 0.15s;
 }
@@ -67,7 +67,7 @@
 }
 
 .ds-radio__circle--checked {
-  border-color: #5d42e6;
+  border-color: var(--ds-color-primary);
 }
 
 /* ==== Dot ==== */
@@ -81,7 +81,7 @@
 }
 
 .ds-radio__circle--checked .ds-radio__dot {
-  background: #5d42e6;
+  background: var(--ds-color-primary);
   transform: scale(1);
 }
 

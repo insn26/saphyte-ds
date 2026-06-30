@@ -4,7 +4,7 @@
   flex-direction: column;
   border-radius: 8px;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #18181b;
+  color: var(--fg-default);
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -15,23 +15,23 @@
 
 /* ==== Variants ==== */
 .ds-card--elevated {
-  background: #ffffff;
+  background: var(--bg-default);
   border: 1px solid transparent;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .ds-card--outline {
-  background: #ffffff;
-  border: 1px solid #e4e4e7;
+  background: var(--bg-default);
+  border: 1px solid var(--border-default);
 }
 
 .ds-card--subtle {
-  background: #fafafa;
-  border: 1px solid #f4f4f5;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
 }
 
 .ds-card--solid {
-  background: #f4f4f5;
+  background: var(--bg-muted);
   border: 1px solid transparent;
 }
 
@@ -59,7 +59,7 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
-  color: #18181b;
+  color: var(--fg-default);
 }
 
 .ds-card__header:empty {
@@ -70,14 +70,14 @@
   flex: 1;
   font-size: 14px;
   line-height: 20px;
-  color: #27272a;
+  color: var(--border-inverted);
 }
 
 .ds-card__footer {
   display: flex;
   align-items: center;
   gap: 8px;
-  border-top: 1px solid #f4f4f5;
+  border-top: 1px solid var(--border-subtle);
 }
 
 .ds-card__footer:empty {

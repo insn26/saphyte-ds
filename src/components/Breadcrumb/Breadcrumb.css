@@ -36,7 +36,7 @@
 .ds-breadcrumb__separator {
   display: inline-flex;
   align-items: center;
-  color: #a1a1aa;
+  color: var(--fg-subtle);
   user-select: none;
   list-style: none;
   font-size: inherit;
@@ -44,14 +44,14 @@
 }
 
 .ds-breadcrumb__link {
-  color: #5d42e6;
+  color: var(--ds-color-primary);
   text-decoration: none;
   transition: color 0.15s;
   border-radius: 4px;
 }
 
 .ds-breadcrumb__link:hover {
-  color: #4c34c8;
+  color: var(--ds-color-primary-hover);
   text-decoration: underline;
 }
 
@@ -61,7 +61,7 @@
 }
 
 .ds-breadcrumb__current {
-  color: #52525b;
+  color: var(--fg-muted);
   font-weight: 500;
   cursor: default;
 }

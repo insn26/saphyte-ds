@@ -4,7 +4,7 @@
   align-items: center;
   background: transparent;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #71717a;
+  color: var(--fg-subtle);
   flex-shrink: 0;
 }
 
@@ -21,7 +21,7 @@
 .ds-divider__line {
   display: block;
   flex: 1;
-  border: 0 solid #e4e4e7;
+  border: 0 solid var(--border-default);
 }
 
 .ds-divider--horizontal .ds-divider__line {
@@ -46,7 +46,7 @@
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #71717a;
+  color: var(--fg-subtle);
 }
 
 .ds-divider--horizontal {

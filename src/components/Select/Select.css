@@ -4,7 +4,7 @@
   flex-direction: column;
   gap: 4px;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #18181b;
+  color: var(--fg-default);
 }
 
 .ds-select-root--full {
@@ -16,21 +16,21 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 16px;
-  color: #27272a;
+  color: var(--fg-default);
 }
 
 .ds-select__helper-text {
   margin: 0;
   font-size: 12px;
   line-height: 16px;
-  color: #71717a;
+  color: var(--fg-subtle);
 }
 
 .ds-select__error-text {
   margin: 0;
   font-size: 12px;
   line-height: 16px;
-  color: #ef4444;
+  color: var(--ds-color-error);
 }
 
 /* ==== Select Wrapper ==== */
@@ -39,8 +39,8 @@
   display: inline-flex;
   align-items: center;
   width: 200px;
-  background: #ffffff;
-  border: 1px solid #d4d4d8;
+  background: var(--bg-default);
+  border: 1px solid var(--border-emphasized);
   border-radius: 4px;
   transition: border-color 0.15s, box-shadow 0.15s, background-color 0.15s;
 }
@@ -50,45 +50,45 @@
 }
 
 .ds-select-wrapper:hover:not(.ds-select-wrapper--disabled) {
-  border-color: #a1a1aa;
+  border-color: var(--fg-subtle);
 }
 
 .ds-select-wrapper:focus-within {
-  border-color: #5d42e6;
+  border-color: var(--ds-color-primary);
   box-shadow: 0 0 0 3px rgba(93, 66, 230, 0.6);
 }
 
 /* ==== Variants ==== */
 .ds-select-wrapper--filled {
-  background: #f4f4f5;
+  background: var(--bg-muted);
   border-color: transparent;
 }
 
 .ds-select-wrapper--filled:hover:not(.ds-select-wrapper--disabled) {
-  background: #e4e4e7;
+  background: var(--bg-emphasized);
 }
 
 .ds-select-wrapper--filled:focus-within {
-  background: #ffffff;
-  border-color: #5d42e6;
+  background: var(--bg-default);
+  border-color: var(--ds-color-primary);
 }
 
 .ds-select-wrapper--flushed {
   background: transparent;
   border: none;
-  border-bottom: 1px solid #d4d4d8;
+  border-bottom: 1px solid var(--border-emphasized);
   border-radius: 0;
 }
 
 .ds-select-wrapper--flushed:focus-within {
-  border-bottom-color: #5d42e6;
+  border-bottom-color: var(--ds-color-primary);
   box-shadow: none;
 }
 
 /* ==== Invalid ==== */
 .ds-select-wrapper--invalid,
 .ds-select-wrapper--invalid:focus-within {
-  border-color: #ef4444;
+  border-color: var(--ds-color-error);
 }
 
 .ds-select-wrapper--invalid:focus-within {
@@ -97,8 +97,8 @@
 
 /* ==== Disabled ==== */
 .ds-select-wrapper--disabled {
-  background: #f4f4f5;
-  border-color: #e4e4e7;
+  background: var(--bg-muted);
+  border-color: var(--border-default);
   cursor: not-allowed;
   opacity: 0.7;
 }
@@ -119,7 +119,7 @@
   border: none;
   outline: none;
   background: transparent;
-  color: #18181b;
+  color: var(--fg-default);
   font-family: inherit;
   font-size: 14px;
   line-height: 20px;
@@ -146,6 +146,6 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #71717a;
+  color: var(--fg-subtle);
   pointer-events: none;
 }

@@ -1,7 +1,7 @@
 /* ==== RadioGroup ==== */
 .ds-radio-group {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #18181b;
+  color: var(--fg-default);
 }
 
 /* ==== Radio Item ==== */
@@ -36,8 +36,8 @@
   width: 18px;
   height: 18px;
   border-radius: 9999px;
-  border: 2px solid #d4d4d8;
-  background: #ffffff;
+  border: 2px solid var(--border-emphasized);
+  background: var(--bg-default);
   flex-shrink: 0;
   transition: border-color 0.15s, background-color 0.15s;
   margin-top: 1px;
@@ -58,7 +58,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #ffffff;
+  background: var(--bg-default);
   transform: scale(0);
   transition: transform 0.15s;
 }
@@ -74,8 +74,8 @@
 }
 
 .ds-radio__control--checked {
-  background: #5d42e6;
-  border-color: #5d42e6;
+  background: var(--ds-color-primary);
+  border-color: var(--ds-color-primary);
 }
 
 .ds-radio__control--checked .ds-radio__dot {
@@ -96,7 +96,7 @@
 .ds-radio__label-text {
   font-size: 14px;
   line-height: 1.4;
-  color: #18181b;
+  color: var(--fg-default);
 }
 
 .ds-radio--sm .ds-radio__label-text {
@@ -110,7 +110,7 @@
 .ds-radio__description {
   font-size: 12px;
   line-height: 1.4;
-  color: #71717a;
+  color: var(--fg-subtle);
 }
 
 .ds-radio--lg .ds-radio__description {

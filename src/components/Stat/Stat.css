@@ -4,7 +4,7 @@
   flex-direction: column;
   gap: 2px;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #18181b;
+  color: var(--fg-default);
 }
 
 /* ==== Stat Group ==== */
@@ -18,7 +18,7 @@
 .ds-stat__label {
   font-size: 12px;
   font-weight: 500;
-  color: #71717a;
+  color: var(--fg-subtle);
   text-transform: uppercase;
   letter-spacing: 0.04em;
   line-height: 1.4;
@@ -29,7 +29,7 @@
   font-size: 30px;
   font-weight: 700;
   line-height: 1.1;
-  color: #18181b;
+  color: var(--fg-default);
   letter-spacing: -0.02em;
 }
 
@@ -37,7 +37,7 @@
 .ds-stat__help-text {
   font-size: 14px;
   font-weight: 400;
-  color: #71717a;
+  color: var(--fg-subtle);
   line-height: 1.4;
   display: inline-flex;
   align-items: center;
@@ -55,13 +55,13 @@
 }
 
 .ds-stat__arrow--up {
-  color: #16a34a;
+  color: var(--ds-color-success);
 }
 
 .ds-stat__arrow--down {
-  color: #dc2626;
+  color: var(--ds-color-error);
 }
 
 .ds-stat__arrow--flat {
-  color: #71717a;
+  color: var(--fg-subtle);
 }

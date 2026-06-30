@@ -4,7 +4,7 @@
   flex-direction: column;
   gap: 4px;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #18181b;
+  color: var(--fg-default);
   width: 100%;
 }
 
@@ -18,12 +18,12 @@
 }
 
 .ds-progress__label {
-  color: #27272a;
+  color: var(--fg-default);
   font-weight: 500;
 }
 
 .ds-progress__value {
-  color: #71717a;
+  color: var(--fg-subtle);
   font-variant-numeric: tabular-nums;
 }
 
@@ -31,7 +31,7 @@
 .ds-progress {
   position: relative;
   width: 100%;
-  background: #f4f4f5;
+  background: var(--bg-muted);
   border-radius: 9999px;
   overflow: hidden;
 }
@@ -41,13 +41,13 @@
   height: 100%;
   border-radius: 9999px;
   transition: width 0.3s ease;
-  background: #5d42e6;
+  background: var(--ds-color-primary);
 }
 
-.ds-progress__fill--saphyte { background: #5d42e6; }
-.ds-progress__fill--success { background: #22c55e; }
-.ds-progress__fill--warning { background: #eab308; }
-.ds-progress__fill--error { background: #ef4444; }
+.ds-progress__fill--saphyte { background: var(--ds-color-primary); }
+.ds-progress__fill--success { background: var(--ds-color-success); }
+.ds-progress__fill--warning { background: var(--ds-color-warning); }
+.ds-progress__fill--error { background: var(--ds-color-error); }
 
 .ds-progress__fill--striped {
   background-image: linear-gradient(

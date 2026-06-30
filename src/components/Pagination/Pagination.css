@@ -46,21 +46,21 @@
   border: 1px solid;
 }
 .ds-pagination__button--outline.ds-pagination__button--gray {
-  color: #27272a;
-  border-color: #d4d4d8;
+  color: var(--border-inverted);
+  border-color: var(--border-emphasized);
 }
 .ds-pagination__button--outline.ds-pagination__button--gray:hover:not(.ds-pagination__button--disabled) {
-  background: #f4f4f5;
-  border-color: #a1a1aa;
+  background: var(--bg-muted);
+  border-color: var(--fg-subtle);
 }
 
 .ds-pagination__button--outline.ds-pagination__button--saphyte {
-  color: #4c34c8;
-  border-color: #ddd6fe;
+  color: var(--ds-color-primary-hover);
+  border-color: var(--ds-color-primary-subtle);
 }
 .ds-pagination__button--outline.ds-pagination__button--saphyte:hover:not(.ds-pagination__button--disabled) {
-  background: #ebe7ff;
-  border-color: #bdaeff;
+  background: var(--ds-color-primary-subtle);
+  border-color: var(--brand-saphyte-emphasized);
 }
 
 /* ==== Ghost Variant ==== */
@@ -68,18 +68,18 @@
   border: 1px solid transparent;
 }
 .ds-pagination__button--ghost.ds-pagination__button--gray {
-  color: #52525b;
+  color: var(--fg-muted);
 }
 .ds-pagination__button--ghost.ds-pagination__button--gray:hover:not(.ds-pagination__button--disabled) {
-  background: #f4f4f5;
-  color: #18181b;
+  background: var(--bg-muted);
+  color: var(--fg-default);
 }
 
 .ds-pagination__button--ghost.ds-pagination__button--saphyte {
-  color: #4c34c8;
+  color: var(--ds-color-primary-hover);
 }
 .ds-pagination__button--ghost.ds-pagination__button--saphyte:hover:not(.ds-pagination__button--disabled) {
-  background: #ebe7ff;
+  background: var(--ds-color-primary-subtle);
 }
 
 /* ==== Solid Variant ==== */
@@ -87,41 +87,41 @@
   border: 1px solid transparent;
 }
 .ds-pagination__button--solid.ds-pagination__button--gray {
-  color: #18181b;
-  background: #f4f4f5;
+  color: var(--fg-default);
+  background: var(--bg-muted);
 }
 .ds-pagination__button--solid.ds-pagination__button--gray:hover:not(.ds-pagination__button--disabled) {
-  background: #e4e4e7;
+  background: var(--bg-emphasized);
 }
 
 .ds-pagination__button--solid.ds-pagination__button--saphyte {
-  color: #ffffff;
-  background: #5d42e6;
+  color: var(--fg-inverted);
+  background: var(--ds-color-primary);
 }
 .ds-pagination__button--solid.ds-pagination__button--saphyte:hover:not(.ds-pagination__button--disabled) {
-  background: #4c34c8;
+  background: var(--ds-color-primary-hover);
 }
 
 /* ==== Active State ==== */
 .ds-pagination__button--active.ds-pagination__button--outline {
-  background: #5d42e6;
-  border-color: #5d42e6;
-  color: #ffffff;
+  background: var(--ds-color-primary);
+  border-color: var(--ds-color-primary);
+  color: var(--fg-inverted);
 }
 
 .ds-pagination__button--active.ds-pagination__button--ghost {
-  background: #5d42e6;
-  color: #ffffff;
+  background: var(--ds-color-primary);
+  color: var(--fg-inverted);
 }
 
 .ds-pagination__button--active.ds-pagination__button--solid.ds-pagination__button--saphyte {
-  background: #4c34c8;
-  color: #ffffff;
+  background: var(--ds-color-primary-hover);
+  color: var(--fg-inverted);
 }
 
 .ds-pagination__button--active.ds-pagination__button--solid.ds-pagination__button--gray {
-  background: #18181b;
-  color: #ffffff;
+  background: var(--fg-default);
+  color: var(--fg-inverted);
 }
 
 /* ==== Ellipsis ==== */
@@ -129,7 +129,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #71717a;
+  color: var(--fg-subtle);
   user-select: none;
   font-weight: 500;
 }

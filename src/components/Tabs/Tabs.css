@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #18181b;
+  color: var(--fg-default);
   width: 100%;
 }
 
@@ -20,7 +20,7 @@
 
 /* ==== LINE VARIANT ==== */
 .ds-tabs__list--line {
-  border-bottom: 1px solid #e4e4e7;
+  border-bottom: 1px solid var(--border-default);
   gap: 0;
 }
 
@@ -30,7 +30,7 @@
   cursor: pointer;
   font-family: inherit;
   font-weight: 500;
-  color: #52525b;
+  color: var(--fg-muted);
   padding: 0 16px;
   position: relative;
   display: inline-flex;
@@ -47,12 +47,12 @@
 .ds-tabs__tab--line.ds-tabs__tab--lg { font-size: 16px; }
 
 .ds-tabs__tab--line:hover:not(.ds-tabs__tab--disabled) {
-  color: #18181b;
+  color: var(--fg-default);
 }
 
 .ds-tabs__tab--line.ds-tabs__tab--active {
-  color: #5d42e6;
-  border-bottom-color: #5d42e6;
+  color: var(--ds-color-primary);
+  border-bottom-color: var(--ds-color-primary);
 }
 
 .ds-tabs__tab--line:focus-visible {
@@ -67,7 +67,7 @@
 
 /* ==== ENCLOSED VARIANT ==== */
 .ds-tabs__list--enclosed {
-  border-bottom: 1px solid #e4e4e7;
+  border-bottom: 1px solid var(--border-default);
   gap: 4px;
 }
 
@@ -78,7 +78,7 @@
   cursor: pointer;
   font-family: inherit;
   font-weight: 500;
-  color: #52525b;
+  color: var(--fg-muted);
   padding: 0 16px;
   display: inline-flex;
   align-items: center;
@@ -95,14 +95,14 @@
 .ds-tabs__tab--enclosed.ds-tabs__tab--lg { font-size: 16px; }
 
 .ds-tabs__tab--enclosed:hover:not(.ds-tabs__tab--disabled) {
-  color: #18181b;
+  color: var(--fg-default);
 }
 
 .ds-tabs__tab--enclosed.ds-tabs__tab--active {
-  background: #ffffff;
-  color: #5d42e6;
-  border-color: #e4e4e7;
-  border-bottom-color: #ffffff;
+  background: var(--bg-default);
+  color: var(--ds-color-primary);
+  border-color: var(--border-default);
+  border-bottom-color: var(--bg-default);
 }
 
 .ds-tabs__tab--enclosed:focus-visible {
@@ -112,7 +112,7 @@
 
 /* ==== SOFT-ROUNDED VARIANT ==== */
 .ds-tabs__list--soft-rounded {
-  background: #f4f4f5;
+  background: var(--bg-muted);
   border-radius: 8px;
   padding: 4px;
   gap: 2px;
@@ -126,7 +126,7 @@
   cursor: pointer;
   font-family: inherit;
   font-weight: 500;
-  color: #52525b;
+  color: var(--fg-muted);
   padding: 0 12px;
   display: inline-flex;
   align-items: center;
@@ -142,12 +142,12 @@
 .ds-tabs__tab--soft-rounded.ds-tabs__tab--lg { font-size: 15px; }
 
 .ds-tabs__tab--soft-rounded:hover:not(.ds-tabs__tab--disabled) {
-  color: #18181b;
+  color: var(--fg-default);
 }
 
 .ds-tabs__tab--soft-rounded.ds-tabs__tab--active {
-  background: #ffffff;
-  color: #5d42e6;
+  background: var(--bg-default);
+  color: var(--ds-color-primary);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
@@ -169,5 +169,5 @@
   outline: none;
   font-size: 14px;
   line-height: 1.5;
-  color: #18181b;
+  color: var(--fg-default);
 }

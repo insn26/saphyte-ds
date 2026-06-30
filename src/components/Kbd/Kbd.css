@@ -4,14 +4,14 @@
   align-items: center;
   justify-content: center;
   padding: 0 4px;
-  background: #f4f4f5;
-  border: 1px solid #d4d4d8;
+  background: var(--bg-muted);
+  border: 1px solid var(--border-emphasized);
   border-bottom-width: 2px;
   border-radius: 4px;
   font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-weight: 500;
   line-height: 1;
-  color: #27272a;
+  color: var(--border-inverted);
   user-select: none;
   white-space: nowrap;
   text-transform: capitalize;
@@ -20,21 +20,21 @@
 
 /* ==== Variants ==== */
 .ds-kbd--default {
-  background: #f4f4f5;
-  border-color: #d4d4d8;
-  color: #27272a;
+  background: var(--bg-muted);
+  border-color: var(--border-emphasized);
+  color: var(--border-inverted);
 }
 
 .ds-kbd--subtle {
-  background: #fafafa;
-  border-color: #e4e4e7;
-  color: #52525b;
+  background: var(--bg-subtle);
+  border-color: var(--border-default);
+  color: var(--fg-muted);
 }
 
 .ds-kbd--solid {
-  background: #18181b;
-  border-color: #18181b;
-  color: #fafafa;
+  background: var(--fg-default);
+  border-color: var(--fg-default);
+  color: var(--bg-subtle);
 }
 
 /* ==== Sizes ==== */

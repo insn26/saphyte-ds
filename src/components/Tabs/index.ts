@@ -5,6 +5,7 @@ export {
   TabPanels,
   TabPanel,
   useTabsContext,
+  useTabIndex,
 } from "./Tabs";
 export type {
   TabsProps,

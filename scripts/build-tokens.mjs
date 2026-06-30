@@ -6,87 +6,64 @@ import fs from "fs";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
 
-// Convert nested tokens to DTCG format with { value: "..." }
-function toDTCG(obj) {
+function loadTokens(filePath) {
+  const raw = JSON.parse(fs.readFileSync(filePath, "utf8"));
+  return convertDtcgToSd(raw);
+}
+
+function convertDtcgToSd(obj) {
+  if (obj === null || typeof obj !== "object") return obj;
+  if (obj.$value !== undefined) {
+    return { value: obj.$value };
+  }
   const result = {};
   for (const [key, value] of Object.entries(obj)) {
-    if (value && typeof value === "object" && !Array.isArray(value)) {
-      // Check if this is a leaf value (has $value or value)
-      if (value.value !== undefined || value.$value !== undefined) {
-        result[key] = { value: value.value || value.$value };
-      } else {
-        result[key] = toDTCG(value);
-      }
+    if (key === "$type" || key === "$description") continue;
+    if (typeof value === "object" && value !== null) {
+      result[key] = convertDtcgToSd(value);
     } else {
-      result[key] = { value: String(value) };
+      result[key] = value;
     }
   }
   return result;
 }
 
-function loadAndConvert(filePath) {
-  const data = JSON.parse(fs.readFileSync(filePath, "utf8"));
-  return toDTCG(data);
+const tokenFiles = ["primitives.json", "typography.json", "sizes.json"];
+
+async function buildTheme(name, themeFile, selector) {
+  const data = {};
+  for (const file of tokenFiles) {
+    Object.assign(data, loadTokens(`${rootDir}/tokens/${file}`));
+  }
+  Object.assign(data, loadTokens(`${rootDir}/tokens/${themeFile}`));
+
+  const sd = new StyleDictionary({
+    tokens: data,
+    platforms: {
+      css: {
+        transformGroup: "css",
+        buildPath: `${rootDir}/src/tokens/`,
+        files: [
+          {
+            destination: `tokens-${name}.css`,
+            format: "css/variables",
+            options: {
+              selector,
+              outputReferences: true,
+            },
+          },
+        ],
+      },
+    },
+  });
+
+  await sd.buildAllPlatforms();
+  console.log(`Build complete: src/tokens/tokens-${name}.css`);
 }
 
-// Build light mode tokens
-const lightData = {
-  ...loadAndConvert(`${rootDir}/tokens/primitives.json`),
-  ...loadAndConvert(`${rootDir}/tokens/typography.json`),
-  ...loadAndConvert(`${rootDir}/tokens/default.json`),
-  ...loadAndConvert(`${rootDir}/tokens/light.json`),
-};
+async function main() {
+  await buildTheme("light", "light.json", ":root");
+  await buildTheme("dark", "dark.json", '[data-theme="dark"]');
+}
 
-const lightSd = new StyleDictionary({
-  tokens: lightData,
-  platforms: {
-    css: {
-      transformGroup: "css",
-      buildPath: `${rootDir}/src/tokens/`,
-      files: [
-        {
-          destination: "tokens-light.css",
-          format: "css/variables",
-          options: {
-            selector: ":root",
-            outputReferences: true,
-          },
-        },
-      ],
-    },
-  },
-});
-
-await lightSd.buildAllPlatforms();
-console.log("Build complete: src/tokens/tokens-light.css");
-
-// Build dark mode tokens
-const darkData = {
-  ...loadAndConvert(`${rootDir}/tokens/primitives.json`),
-  ...loadAndConvert(`${rootDir}/tokens/typography.json`),
-  ...loadAndConvert(`${rootDir}/tokens/default.json`),
-  ...loadAndConvert(`${rootDir}/tokens/dark.json`),
-};
-
-const darkSd = new StyleDictionary({
-  tokens: darkData,
-  platforms: {
-    css: {
-      transformGroup: "css",
-      buildPath: `${rootDir}/src/tokens/`,
-      files: [
-        {
-          destination: "tokens-dark.css",
-          format: "css/variables",
-          options: {
-            selector: '[data-theme="dark"]',
-            outputReferences: true,
-          },
-        },
-      ],
-    },
-  },
-});
-
-await darkSd.buildAllPlatforms();
-console.log("Build complete: src/tokens/tokens-dark.css");
+await main();

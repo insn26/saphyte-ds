@@ -4,7 +4,7 @@
   overflow-x: auto;
   border-radius: 8px;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #18181b;
+  color: var(--fg-default);
 }
 
 /* ==== Table Base ==== */
@@ -19,7 +19,7 @@
 .ds-table caption {
   text-align: left;
   padding: 8px 0;
-  color: #71717a;
+  color: var(--fg-subtle);
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -52,9 +52,9 @@
 /* ==== Header ==== */
 .ds-table__th {
   font-weight: 600;
-  color: #52525b;
-  background: #fafafa;
-  border-bottom: 1px solid #e4e4e7;
+  color: var(--fg-muted);
+  background: var(--bg-subtle);
+  border-bottom: 1px solid var(--border-default);
   text-transform: uppercase;
   font-size: 11px;
   letter-spacing: 0.05em;
@@ -69,8 +69,8 @@
 
 /* ==== Cell ==== */
 .ds-table__td {
-  border-bottom: 1px solid #f4f4f5;
-  color: #18181b;
+  border-bottom: 1px solid var(--bg-muted);
+  color: var(--fg-default);
   vertical-align: middle;
 }
 
@@ -87,25 +87,25 @@
 
 /* ==== Striped Variant ==== */
 .ds-table--striped .ds-table__tbody .ds-table__tr:nth-child(even) .ds-table__td {
-  background: #fafafa;
+  background: var(--bg-subtle);
 }
 
 .ds-table--striped .ds-table__th {
-  background: #f4f4f5;
+  background: var(--bg-muted);
 }
 
 /* ==== Bordered Variant ==== */
 .ds-table--bordered {
-  border: 1px solid #e4e4e7;
+  border: 1px solid var(--border-default);
 }
 
 .ds-table--bordered .ds-table__th,
 .ds-table--bordered .ds-table__td {
-  border: 1px solid #e4e4e7;
+  border: 1px solid var(--border-default);
 }
 
 .ds-table--bordered .ds-table__tr:last-child .ds-table__td {
-  border-bottom: 1px solid #e4e4e7;
+  border-bottom: 1px solid var(--border-default);
 }
 
 /* ==== Interactive ==== */
@@ -115,14 +115,14 @@
 }
 
 .ds-table--interactive .ds-table__tbody .ds-table__tr:hover .ds-table__td {
-  background: #f4f4f5;
+  background: var(--bg-muted);
 }
 
 .ds-table--striped.ds-table--interactive .ds-table__tbody .ds-table__tr:hover .ds-table__td {
-  background: #f4f4f5;
+  background: var(--bg-muted);
 }
 
 .ds-table__tr--selected .ds-table__td {
-  background: #ebe7ff !important;
-  color: #4c34c8;
+  background: var(--ds-color-primary-subtle) !important;
+  color: var(--ds-color-primary-hover);
 }

@@ -35,8 +35,8 @@
 .ds-modal__content {
   position: relative;
   z-index: 1;
-  background: #ffffff;
-  color: #18181b;
+  background: var(--bg-panel);
+  color: var(--fg-default);
   border-radius: 8px;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   display: flex;
@@ -79,7 +79,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  border-bottom: 1px solid #e4e4e7;
+  border-bottom: 1px solid var(--border-default);
   font-size: 16px;
   font-weight: 600;
   flex-shrink: 0;
@@ -96,7 +96,7 @@
   overflow-y: auto;
   font-size: 14px;
   line-height: 1.5;
-  color: #52525b;
+  color: var(--fg-muted);
 }
 
 /* ==== Footer ==== */
@@ -106,7 +106,7 @@
   align-items: center;
   justify-content: flex-end;
   gap: 8px;
-  border-top: 1px solid #e4e4e7;
+  border-top: 1px solid var(--border-default);
   flex-shrink: 0;
 }
 
@@ -126,13 +126,13 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  color: #71717a;
+  color: var(--fg-subtle);
   transition: background-color 0.15s, color 0.15s;
 }
 
 .ds-modal__close:hover {
-  background: #f4f4f5;
-  color: #18181b;
+  background: var(--bg-muted);
+  color: var(--fg-default);
 }
 
 .ds-modal__close:focus-visible {

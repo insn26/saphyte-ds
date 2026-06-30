@@ -6,68 +6,62 @@
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: var(--color-text-fg);
-  background-color: var(--color-background-bg);
+  color: var(--fg-default);
+  background-color: var(--bg-default);
 
-  /* Design system CSS variables (aliased) */
-  --ds-color-bg: var(--color-background-bg, #ffffff);
-  --ds-color-bg-subtle: var(--color-background-bg-subtle, #fafafa);
-  --ds-color-bg-muted: var(--color-background-bg-muted, #f4f4f5);
-  --ds-color-bg-emphasized: var(--color-background-bg-emphasized, #e4e4e7);
-  --ds-color-bg-inverted: var(--color-background-bg-inverted, #18181b);
+  --ds-color-bg: var(--bg-default);
+  --ds-color-bg-subtle: var(--bg-subtle);
+  --ds-color-bg-muted: var(--bg-muted);
+  --ds-color-bg-emphasized: var(--bg-emphasized);
+  --ds-color-bg-inverted: var(--bg-inverted);
 
-  --ds-color-fg: var(--color-text-fg, #18181b);
-  --ds-color-fg-muted: var(--color-text-fg-muted, #52525b);
-  --ds-color-fg-subtle: var(--color-text-fg-subtle, #a1a1aa);
-  --ds-color-fg-inverted: var(--color-text-fg-inverted, #fafafa);
+  --ds-color-fg: var(--fg-default);
+  --ds-color-fg-muted: var(--fg-muted);
+  --ds-color-fg-subtle: var(--fg-subtle);
+  --ds-color-fg-inverted: var(--fg-inverted);
 
-  --ds-color-border: var(--color-border-border, #e4e4e7);
-  --ds-color-border-subtle: var(--color-border-border-subtle, #f4f4f5);
-  --ds-color-border-muted: var(--color-border-border-muted, #d4d4d8);
-  --ds-color-border-emphasized: var(--color-border-border-emphasized, #a1a1aa);
+  --ds-color-border: var(--border-default);
+  --ds-color-border-subtle: var(--border-subtle);
+  --ds-color-border-muted: var(--border-muted);
+  --ds-color-border-emphasized: var(--border-emphasized);
 
-  /* Brand colors */
-  --ds-color-primary: var(--color-orange-solid, #f97316);
-  --ds-color-primary-hover: var(--color-orange-emphasized, #ea580c);
-  --ds-color-primary-subtle: var(--color-orange-subtle, #fff7ed);
-  --ds-color-primary-fg: var(--color-orange-contrast, #ffffff);
-  --ds-color-primary-muted: var(--color-orange-muted, #fed7aa);
-  --ds-color-focus-ring: var(--color-orange-focus-ring, rgba(249, 115, 22, 0.6));
+  --ds-color-primary: var(--brand-saphyte-solid);
+  --ds-color-primary-hover: var(--brand-saphyte-emphasized);
+  --ds-color-primary-subtle: var(--brand-saphyte-subtle);
+  --ds-color-primary-fg: var(--brand-saphyte-contrast);
+  --ds-color-primary-muted: var(--brand-saphyte-muted);
+  --ds-color-focus-ring: var(--brand-saphyte-focus-ring);
 
-  /* Status colors */
-  --ds-color-success: var(--color-green-solid, #22c55e);
-  --ds-color-success-subtle: var(--color-green-subtle, #f0fdf4);
-  --ds-color-warning: var(--color-yellow-solid, #eab308);
-  --ds-color-warning-subtle: var(--color-yellow-subtle, #fefce8);
-  --ds-color-error: var(--color-red-solid, #ef4444);
-  --ds-color-error-subtle: var(--color-red-subtle, #fef2f2);
-  --ds-color-info: var(--color-blue-solid, #3b82f6);
-  --ds-color-info-subtle: var(--color-blue-subtle, #eff6ff);
+  --ds-color-success: var(--green-solid);
+  --ds-color-success-subtle: var(--green-subtle);
+  --ds-color-warning: var(--yellow-solid);
+  --ds-color-warning-subtle: var(--yellow-subtle);
+  --ds-color-error: var(--red-solid);
+  --ds-color-error-subtle: var(--red-subtle);
+  --ds-color-info: var(--blue-solid);
+  --ds-color-info-subtle: var(--blue-subtle);
 
-  /* Spacing */
-  --ds-spacing-1: 4px;
-  --ds-spacing-2: 8px;
-  --ds-spacing-3: 12px;
-  --ds-spacing-4: 16px;
-  --ds-spacing-5: 20px;
-  --ds-spacing-6: 24px;
-  --ds-spacing-8: 32px;
-  --ds-spacing-10: 40px;
-  --ds-spacing-12: 48px;
+  --ds-spacing-1: var(--spacing-1);
+  --ds-spacing-2: var(--spacing-2);
+  --ds-spacing-3: var(--spacing-3);
+  --ds-spacing-4: var(--spacing-4);
+  --ds-spacing-5: var(--spacing-5);
+  --ds-spacing-6: var(--spacing-6);
+  --ds-spacing-8: var(--spacing-8);
+  --ds-spacing-10: var(--spacing-10);
+  --ds-spacing-12: var(--spacing-12);
 
-  /* Radii */
-  --ds-radius-xs: 2px;
-  --ds-radius-sm: 4px;
-  --ds-radius-md: 6px;
-  --ds-radius-lg: 8px;
-  --ds-radius-xl: 12px;
-  --ds-radius-2xl: 16px;
-  --ds-radius-full: 9999px;
+  --ds-radius-xs: var(--radii-xs);
+  --ds-radius-sm: var(--radii-sm);
+  --ds-radius-md: var(--radii-md);
+  --ds-radius-lg: var(--radii-lg);
+  --ds-radius-xl: var(--radii-xl);
+  --ds-radius-2xl: var(--radii-2xl);
+  --ds-radius-full: var(--radii-full);
 
-  /* Shadows */
   --ds-shadow-xs: 0 0 0 1px rgba(0, 0, 0, 0.05);
   --ds-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --ds-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --ds-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.06);
   --ds-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --ds-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }

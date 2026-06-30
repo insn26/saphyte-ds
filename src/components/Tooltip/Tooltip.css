@@ -32,23 +32,23 @@
 
 /* ==== Variants ==== */
 .ds-tooltip--solid {
-  background: #18181b;
-  color: #ffffff;
+  background: var(--bg-inverted);
+  color: var(--fg-inverted);
 }
 
 .ds-tooltip--solid .ds-tooltip__arrow {
-  background: #18181b;
+  background: var(--bg-inverted);
 }
 
 .ds-tooltip--subtle {
-  background: #f4f4f5;
-  color: #27272a;
-  border: 1px solid #e4e4e7;
+  background: var(--bg-muted);
+  color: var(--border-inverted);
+  border: 1px solid var(--border-default);
 }
 
 .ds-tooltip--subtle .ds-tooltip__arrow {
-  background: #f4f4f5;
-  border: 1px solid #e4e4e7;
+  background: var(--bg-muted);
+  border: 1px solid var(--border-default);
 }
 
 /* ==== Arrow ==== */
@@ -61,7 +61,7 @@
 }
 
 .ds-tooltip--subtle .ds-tooltip__arrow {
-  background: #f4f4f5;
+  background: var(--bg-muted);
 }
 
 /* ==== Positions ==== */

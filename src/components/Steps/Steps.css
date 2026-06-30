@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #18181b;
+  color: var(--fg-default);
 }
 
 .ds-steps--horizontal {
@@ -73,7 +73,7 @@
   border: 2px solid;
   font-weight: 600;
   flex-shrink: 0;
-  background: #ffffff;
+  background: var(--bg-default);
   position: relative;
   z-index: 1;
 }
@@ -104,57 +104,57 @@
 /* ==== Status Colors ==== */
 .ds-steps__step--incomplete.ds-steps__step--gray .ds-steps__indicator,
 .ds-steps__step--incomplete.ds-steps__step--gray .ds-steps__icon {
-  border-color: #d4d4d8;
-  color: #71717a;
+  border-color: var(--border-emphasized);
+  color: var(--fg-subtle);
 }
 
 .ds-steps__step--active.ds-steps__step--gray .ds-steps__indicator,
 .ds-steps__step--active.ds-steps__step--gray .ds-steps__icon {
-  border-color: #18181b;
-  background: #18181b;
-  color: #ffffff;
+  border-color: var(--fg-default);
+  background: var(--fg-default);
+  color: var(--fg-inverted);
 }
 
 .ds-steps__step--complete.ds-steps__step--gray .ds-steps__indicator,
 .ds-steps__step--complete.ds-steps__step--gray .ds-steps__icon {
-  border-color: #18181b;
-  background: #18181b;
-  color: #ffffff;
+  border-color: var(--fg-default);
+  background: var(--fg-default);
+  color: var(--fg-inverted);
 }
 
 .ds-steps__step--incomplete.ds-steps__step--saphyte .ds-steps__indicator,
 .ds-steps__step--incomplete.ds-steps__step--saphyte .ds-steps__icon {
-  border-color: #d8d0ff;
-  color: #a1a1aa;
+  border-color: var(--ds-color-primary-muted);
+  color: var(--fg-subtle);
 }
 
 .ds-steps__step--active.ds-steps__step--saphyte .ds-steps__indicator,
 .ds-steps__step--active.ds-steps__step--saphyte .ds-steps__icon {
-  border-color: #5d42e6;
-  background: #5d42e6;
-  color: #ffffff;
+  border-color: var(--ds-color-primary);
+  background: var(--ds-color-primary);
+  color: var(--fg-inverted);
   box-shadow: 0 0 0 4px rgba(93, 66, 230, 0.15);
 }
 
 .ds-steps__step--complete.ds-steps__step--saphyte .ds-steps__indicator,
 .ds-steps__step--complete.ds-steps__step--saphyte .ds-steps__icon {
-  border-color: #5d42e6;
-  background: #5d42e6;
-  color: #ffffff;
+  border-color: var(--ds-color-primary);
+  background: var(--ds-color-primary);
+  color: var(--fg-inverted);
 }
 
 /* ==== Connector ==== */
 .ds-steps__connector {
   flex: 1;
   height: 2px;
-  background: #e4e4e7;
+  background: var(--bg-emphasized);
   margin: 0 8px;
   border-radius: 9999px;
   transition: background-color 0.2s;
 }
 
 .ds-steps__step--complete .ds-steps__connector {
-  background: #5d42e6;
+  background: var(--ds-color-primary);
 }
 
 .ds-steps--vertical .ds-steps__connector {
@@ -185,20 +185,20 @@
 .ds-steps__title {
   font-weight: 500;
   line-height: 1.3;
-  color: #18181b;
+  color: var(--fg-default);
 }
 
 .ds-steps__step--incomplete .ds-steps__title {
-  color: #71717a;
+  color: var(--fg-subtle);
 }
 
 .ds-steps__step--active .ds-steps__title {
-  color: #18181b;
+  color: var(--fg-default);
   font-weight: 600;
 }
 
 .ds-steps__description {
-  color: #71717a;
+  color: var(--fg-subtle);
   line-height: 1.4;
 }
 

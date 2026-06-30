@@ -1,12 +1,12 @@
 /* ==== Skeleton Base ==== */
 .ds-skeleton {
   display: block;
-  background: #f4f4f5;
+  background: var(--bg-muted);
   background: linear-gradient(
     90deg,
-    #f4f4f5 0%,
-    #e4e4e7 50%,
-    #f4f4f5 100%
+    var(--bg-muted) 0%,
+    var(--border-default) 50%,
+    var(--bg-muted) 100%
   );
   background-size: 200% 100%;
   animation: ds-skeleton-pulse 1.4s ease-in-out infinite;

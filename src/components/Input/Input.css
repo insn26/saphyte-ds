@@ -4,7 +4,7 @@
   flex-direction: column;
   gap: 4px;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #18181b;
+  color: var(--fg-default);
 }
 
 .ds-input-root--full {
@@ -16,21 +16,21 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 16px;
-  color: #27272a;
+  color: var(--fg-default);
 }
 
 .ds-input__helper-text {
   margin: 0;
   font-size: 12px;
   line-height: 16px;
-  color: #71717a;
+  color: var(--fg-subtle);
 }
 
 .ds-input__error-text {
   margin: 0;
   font-size: 12px;
   line-height: 16px;
-  color: #ef4444;
+  color: var(--ds-color-error);
 }
 
 /* ==== Input Wrapper ==== */
@@ -39,8 +39,8 @@
   display: inline-flex;
   align-items: center;
   width: 240px;
-  background: #ffffff;
-  border: 1px solid #d4d4d8;
+  background: var(--bg-default);
+  border: 1px solid var(--border-emphasized);
   border-radius: 4px;
   transition: border-color 0.15s, box-shadow 0.15s, background-color 0.15s;
 }
@@ -50,47 +50,47 @@
 }
 
 .ds-input-wrapper:hover:not(.ds-input-wrapper--disabled) {
-  border-color: #a1a1aa;
+  border-color: var(--fg-subtle);
 }
 
 .ds-input-wrapper:focus-within {
-  border-color: #5d42e6;
+  border-color: var(--ds-color-primary);
   box-shadow: 0 0 0 3px rgba(93, 66, 230, 0.6);
 }
 
 /* ==== Variants ==== */
 .ds-input-wrapper--filled {
-  background: #f4f4f5;
+  background: var(--bg-muted);
   border-color: transparent;
 }
 
 .ds-input-wrapper--filled:hover:not(.ds-input-wrapper--disabled) {
-  background: #e4e4e7;
+  background: var(--bg-emphasized);
 }
 
 .ds-input-wrapper--filled:focus-within {
-  background: #ffffff;
-  border-color: #5d42e6;
+  background: var(--bg-default);
+  border-color: var(--ds-color-primary);
 }
 
 .ds-input-wrapper--flushed {
   background: transparent;
   border: none;
-  border-bottom: 1px solid #d4d4d8;
+  border-bottom: 1px solid var(--border-emphasized);
   border-radius: 0;
   padding-left: 0;
   padding-right: 0;
 }
 
 .ds-input-wrapper--flushed:focus-within {
-  border-bottom-color: #5d42e6;
+  border-bottom-color: var(--ds-color-primary);
   box-shadow: none;
 }
 
 /* ==== Invalid ==== */
 .ds-input-wrapper--invalid,
 .ds-input-wrapper--invalid:focus-within {
-  border-color: #ef4444;
+  border-color: var(--ds-color-error);
 }
 
 .ds-input-wrapper--invalid:focus-within {
@@ -99,8 +99,8 @@
 
 /* ==== Disabled ==== */
 .ds-input-wrapper--disabled {
-  background: #f4f4f5;
-  border-color: #e4e4e7;
+  background: var(--bg-muted);
+  border-color: var(--border-default);
   cursor: not-allowed;
   opacity: 0.7;
 }
@@ -114,7 +114,7 @@
   border: none;
   outline: none;
   background: transparent;
-  color: #18181b;
+  color: var(--fg-default);
   font-family: inherit;
   font-size: 14px;
   line-height: 20px;
@@ -122,7 +122,7 @@
 }
 
 .ds-input::placeholder {
-  color: #a1a1aa;
+  color: var(--fg-subtle);
 }
 
 .ds-input:disabled {
@@ -161,7 +161,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #71717a;
+  color: var(--fg-subtle);
   flex-shrink: 0;
 }
 
