@@ -66,11 +66,12 @@ export const Breadcrumb = React.forwardRef<HTMLElement, BreadcrumbProps>(
             {items.map((child, index) => {
               const isLast = index === lastIndex;
               return (
-                <BreadcrumbItemContext.Provider
+                <React.Fragment
                   key={(React.isValidElement(child) && child.key) || index}
-                  value={{ isLast }}
                 >
-                  <li className="ds-breadcrumb__item">{child}</li>
+                  <BreadcrumbItemContext.Provider value={{ isLast }}>
+                    {child}
+                  </BreadcrumbItemContext.Provider>
                   {!isLast && (
                     <li
                       className="ds-breadcrumb__separator"
@@ -79,7 +80,7 @@ export const Breadcrumb = React.forwardRef<HTMLElement, BreadcrumbProps>(
                       {separator}
                     </li>
                   )}
-                </BreadcrumbItemContext.Provider>
+                </React.Fragment>
               );
             })}
           </ol>

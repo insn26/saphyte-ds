@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "./components/Button";
 import "./styles/global.css";
 
@@ -12,11 +11,12 @@ function App() {
         React component library built from Figma design tokens.
       </p>
       <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-        <Button variant="primary">Primary</Button>
-        <Button variant="default">Default</Button>
-        <Button variant="dashed">Dashed</Button>
-        <Button variant="text">Text</Button>
-        <Button variant="link">Link</Button>
+        <Button variant="solid" colorPalette="saphyte">Solid</Button>
+        <Button variant="subtle">Subtle</Button>
+        <Button variant="outline">Outline</Button>
+        <Button variant="surface">Surface</Button>
+        <Button variant="ghost">Ghost</Button>
+        <Button variant="plain">Plain</Button>
       </div>
     </div>
   );
